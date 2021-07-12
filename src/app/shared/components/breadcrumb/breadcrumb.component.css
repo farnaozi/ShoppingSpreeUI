@@ -1,0 +1,16 @@
+.breadcrumb{
+    background-color: #f4f4f4;
+    height: 105px;
+}
+
+.page-name{
+    font-size: 18px;
+    font-weight:500;
+    float: left;
+}
+
+.page-breadcrumb{
+    font-size: 14px;
+    font-weight:500;
+    float: right;
+}
