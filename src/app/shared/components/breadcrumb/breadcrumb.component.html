@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row breadcrumb">
+        <div class="col-12 my-auto">
+            <div class="container">
+              <span class="page-name">{{pageName}}</span>
+              <span class="page-breadcrumb">
+                  {{prevUrl}} 
+                  <span *ngIf="currUrl.length != 0">></span> 
+                  {{currUrl}}</span>
+            </div>
+        </div>
+    </div>
+</div>
