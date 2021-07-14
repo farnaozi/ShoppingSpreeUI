@@ -1,0 +1,35 @@
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bar {
+    background: #9f9f9f;
+    height: 2px;
+}
+::ng-deep  .custom-slider .ngx-slider .ngx-slider-selection {
+    background: black;
+}
+  
+::ng-deep  .custom-slider .ngx-slider .ngx-slider-pointer {
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+
+}
+
+::ng-deep  .custom-slider .ngx-slider .ngx-slider-pointer:after {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    }
+::ng-deep .custom-slider .ngx-slider-active::after {
+    background-color: white!important;
+}
+      
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer:focus{
+    box-shadow: none;
+}
+
+::ng-deep .ngx-slider-pointer:focus 
+{ 
+    outline:0 !important; 
+}

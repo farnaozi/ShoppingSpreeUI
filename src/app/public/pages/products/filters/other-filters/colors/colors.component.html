@@ -1,0 +1,8 @@
+<p class="filter-title">COLORS</p>
+<div class="filter">
+    <div *ngFor="let item of colors.slice(0, rowsNumber);let i = index;" class="row">
+        <div *ngFor="let item of colors.slice(i*6, ((i*6) + 6))" class="col-2">
+            <div [style.background-color]="item" class="color"></div>
+        </div>
+    </div>
+</div>
