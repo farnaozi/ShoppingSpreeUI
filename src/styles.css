@@ -17,8 +17,13 @@ font-family: 'ABeeZee', sans-serif!important;
 .filter{
     margin-bottom: 16px;
 }
-.mat-expansion-panel-content {
+.mat-expansion-panel-content,.mat-expansion-panel-header {
     font:inherit!important
+}
+
+.form-check-input:checked{
+    background-color:red!important;
+    border-color: red!important;
 }
 
 html, body { height: 100%; }
