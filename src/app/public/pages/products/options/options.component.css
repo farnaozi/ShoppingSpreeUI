@@ -1,0 +1,11 @@
+.sort-by{
+    width: 150px;
+}
+
+.fa-th-large, .fa-th-list{
+    font-size: 18px;
+}
+
+.form-select{
+    border: none!important;
+}

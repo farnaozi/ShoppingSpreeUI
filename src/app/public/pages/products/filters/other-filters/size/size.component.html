@@ -1,0 +1,9 @@
+<p class="filter-title">SIZE</p>
+<div class="filter">
+    <div *ngFor="let size of ['S', 'M', 'L', 'XS']" class="form-check">
+        <input class="form-check-input" type="checkbox" [id]="size">
+        <label class="form-check-label" [for]="size">
+            {{size}}
+        </label>
+    </div>
+</div>

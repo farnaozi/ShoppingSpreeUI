@@ -2,5 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 body{
-font-family: 'ABeeZee', sans-serif;
+font-family: 'ABeeZee', sans-serif!important;
 }
+
+.form-check-input,.form-select,.btn:focus{
+    box-shadow: none!important;
+}
+
+.filter-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.filter{
+    margin-bottom: 16px;
+}
+.mat-expansion-panel-content {
+    font:inherit!important
+}
+
+html, body { height: 100%; }
