@@ -54,16 +54,59 @@
         <i class="fa fa-heart" aria-hidden="true"></i>
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
      </div>
-     <button class="btn pull-right" style="font-size: 20px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa fa-bars" aria-hidden="true"></i></button>
+     <button class="btn pull-right" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa fa-bars" aria-hidden="true"></i></button>
     </div> 
    </nav>
 
    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <h5 id="offcanvasRightLabel">Logo.com</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      ...
+        <nav class="nav flex-column">
+            <ul class="side-navbar">
+            <li class="nav-item active"> <a class="nav-link" href="#">Home</a></li>
+           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+           <div>
+           <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Women</a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+             </ul>
+         </li>
+        </div>
+           <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Men</a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                 <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                 <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+               </ul>
+           </li>
+           <li class="nav-item"><a class="nav-link" href="#">Sales</a></li>
+           <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="company-phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:12345 67 89">support: (+599) 12345 67 89</a></div>
+        <div class="dropdown">
+            <button class="dropbtn" style="border-left: 2px solid rgb(218, 218, 218);">ENG <i class="arrow down"></i></button>
+            <div class="dropdown-content">
+            <a href="#">ENG</a>
+            <a href="#">SPN</a>
+            <a href="#">RUS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">USD <i class="arrow down"></i></button>
+            <div class="dropdown-content">
+            <a href="#">USD</a>
+            <a href="#">EUR</a>
+            <a href="#">RUB</a>
+            </div>
+        </div>
     </div>
   </div>
+
