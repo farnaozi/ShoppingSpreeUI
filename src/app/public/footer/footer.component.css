@@ -1,0 +1,20 @@
+.text-reset {
+    text-decoration: none;
+}
+.text-reset:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-image:linear-gradient(180deg,#2f3235,#181c20);
+    color:#f0f9ff;
+}
+
+footer .btn{
+    border:2px solid #ffffff;
+    color:white;
+}
+footer .btn:hover{
+    border:2px solid rgb(196, 0, 0);
+    background-color: rgb(196, 0, 0);
+}
