@@ -32,8 +32,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     NgxSliderModule
   ],
   exports: [
-    ProductsComponent,
-    ProductsListingsComponent
+    ProductsComponent
   ]
 })
 export class ProductsModule { }

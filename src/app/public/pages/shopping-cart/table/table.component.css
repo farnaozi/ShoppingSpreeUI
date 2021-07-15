@@ -1,0 +1,19 @@
+.cart-delete{
+  font-weight: bold;
+  font-size: 18px;
+  color: red;
+}
+td 
+{
+    vertical-align: middle;
+}
+.product-image{
+    width: 148px;
+    height: 148px;
+    background: url(/assets/images/product-3.jpg) center no-repeat ;
+    background-size:cover;
+}
+
+.cart-product-desc p{
+    margin-bottom: 0;
+}

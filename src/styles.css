@@ -26,4 +26,12 @@ font-family: 'ABeeZee', sans-serif!important;
     border-color: red!important;
 }
 
+.color{
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
 html, body { height: 100%; }
