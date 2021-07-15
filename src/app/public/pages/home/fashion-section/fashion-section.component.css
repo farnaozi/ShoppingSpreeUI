@@ -1,0 +1,26 @@
+.card-title{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:8px 12px;
+    text-transform:capitalize;
+    transition: 0.4s;
+}
+.card .card-title:hover {
+    background-color: rgb(180, 0, 0);
+}
+
+.card {
+    border:none;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.4s;
+}
+.card:hover{
+    transform: scale(1.01);
+    opacity: 0.91;
+}
+

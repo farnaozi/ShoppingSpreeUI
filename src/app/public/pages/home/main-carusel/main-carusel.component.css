@@ -4,7 +4,7 @@
 
 .carousel-indicators button {
     width: 14px;
-    height: 14px;
+    height: 13px;
     border-radius: 100%;
     background-color: rgb(65, 65, 65);
 }
@@ -21,7 +21,7 @@
 .carousel-item a {
     padding:12px 18px;
     color:white;
-    border-radius: 4px;
+    border-radius: 3px;
     text-decoration: none;
     background-color: rgb(180, 0, 0);
 }

@@ -1,0 +1,18 @@
+.card {
+    border:none;
+}
+.read-more {
+    text-decoration: none;
+    color:black;
+    border-bottom: 3px solid rgb(241, 0, 0);
+    transition: 0.2s;
+}
+.read-more:hover {
+    border-bottom: 3px solid rgb(255, 0, 0);
+    text-shadow: 1px 1px 3px rgb(116, 116, 116);
+
+}
+.row .text-center {
+    border-bottom: 3px solid rgb(255, 0, 0);
+}
+
