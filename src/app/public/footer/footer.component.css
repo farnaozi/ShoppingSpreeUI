@@ -6,6 +6,7 @@
 }
 
 footer {
+    margin-top: 50px;
     background-image:linear-gradient(180deg,#2f3235,#181c20);
     color:#f0f9ff;
 }

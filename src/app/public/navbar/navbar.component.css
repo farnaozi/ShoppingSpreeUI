@@ -36,7 +36,6 @@
     .topnav .company-phone,.topnav .company-phone i,.topnav .dropbtn,.topnav .left-border{
         display: none;
     }
-
 }
 
 .topnav .arrow,.offcanvas-body .arrow {
@@ -69,7 +68,7 @@
     background-color: #f9f9f9;
     min-width: 40px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1500 !important;
   }
   
   .topnav  .dropdown-content a,.offcanvas-body .dropdown-content a {
@@ -128,16 +127,9 @@
     padding: 0px 10px;
 }
 
-.nav {
-    border-bottom: 2px solid rgb(218, 218, 218);
-    margin-bottom: 20px;
-}
-.nav .dropbtn {
-    border:none !important;
-}
-
 .nav .side-navbar .nav-item {
     list-style-type: none;
+    font-size: 20px;
 }
 .nav .side-navbar .nav-item a:hover,.navbar .navbar-nav a:hover,.navbar .btn:hover {
     color:rgb(236, 0, 0);
@@ -160,4 +152,17 @@
 
 #offcanvasRightLabel {
     margin-top: 12px;
+}
+
+.position-absolute {
+    margin:20px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    transition: 0.4s;
+    border:none;
+    background-color: white;
+}
+.position-absolute:hover {
+    text-shadow: 2px 2px 4px rgb(126, 126, 126);
 }
