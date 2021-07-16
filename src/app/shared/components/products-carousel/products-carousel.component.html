@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p>{{title}}</p>
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let product of data; let i = index" class="product-card">
+                    <div class="product-image">
+                        <span style="left: 0;" *ngIf="i%2!=0" class="sale-sign">20% OFF</span>
+                    </div>
+                    <div class="row product-desc">
+                        <div class="col-12">
+                            <div class="float-start">
+                                <div class="product-name">Piqué Biker Jacket</div>
+                                <div class="product-stars">
+                                    <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
+                                </div>
+                                <div *ngIf="i%2==0" class="current-product-price">$15.00</div>
+                                <div *ngIf="i%2!=0" class="sale">
+                                    <span class="sale-price current-product-price">$10.00 </span>
+                                    <span class="normal-price">$15.00</span>
+                                </div>
+                            </div>
+                            <div class="float-end">
+                              <div class="colors">
+                                  <div [style.background-color]="'#5E64D1'" class="color"></div>
+                                  <div [style.background-color]="'#404A47'" class="color"></div>
+                                  <div [style.background-color]="'#D5A667'" class="color"></div>
+                              </div>
+                              <div class="buttons" style="right: 0;">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>  
+              </owl-carousel-o>
+            
+        </div>
+    </div>
+</div>

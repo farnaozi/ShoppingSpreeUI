@@ -5,10 +5,72 @@ body{
 font-family: 'ABeeZee', sans-serif!important;
 }
 
-.form-check-input,.form-select,.btn:focus{
+/*product-card*/
+.product-card{
+    position: relative;
+    margin-bottom: 30px;
+}
+.product-image{
+    width: 100%;
+    height: 260px;
+    background: url(/assets/images/product-3.jpg) center no-repeat ;
+    background-size:cover;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.sale-sign{
+    position:absolute;
+    padding: 4px 15px 2px;
+    left: 12px;
+    top: 20px;
+    font-size: 11px;
+    color: #fff;
+    background: #111;
+}
+.product-image:hover{
+    opacity: 0.8;
+}
+.product-desc{
+    margin-top: 12px;
+}
+.product-name{
+    font-size: 15px;
+}
+.product-stars i{
+    color: #ffc510;
+    size: 14px;
+}
+.current-product-price{
+    font-size: 18px;
+    font-weight:bold;
+}
+.sale .sale-price{
+    color: red!important;
+}
+.sale .normal-price{
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #9f9f9f;
+}
+.buttons{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+.buttons i{
+    margin-left: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.buttons i:hover{
+    opacity:0.8;
+}
+/*product-card end*/
+
+.form-control,.form-check-input,.form-select,.btn:focus{
     box-shadow: none!important;
 }
-
 .filter-title{
     font-size: 15px;
     font-weight: bold;
@@ -17,6 +79,7 @@ font-family: 'ABeeZee', sans-serif!important;
 .filter{
     margin-bottom: 16px;
 }
+
 .mat-expansion-panel-content,.mat-expansion-panel-header {
     font:inherit!important
 }
@@ -33,5 +96,3 @@ font-family: 'ABeeZee', sans-serif!important;
     border-radius: 50%;
     margin-left: 4px;
 }
-
-html, body { height: 100%; }
