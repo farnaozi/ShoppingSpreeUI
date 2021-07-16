@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FashionDataService } from '../../../../shared/services/fashion-data.service';
 
 @Component({
   selector: 'app-fashion-section',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fashion-section.component.css']
 })
 export class FashionSectionComponent implements OnInit {
-
-  constructor() { }
+  constructor(private fashionDataService: FashionDataService) { }
+  fashionData:any;
 
   ngOnInit(): void {
+    this.fashionData = this.fashionDataService.getFashionData();
   }
 
 }

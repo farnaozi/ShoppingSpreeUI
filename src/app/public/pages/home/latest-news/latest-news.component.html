@@ -1,29 +1,14 @@
 <div class="container mt-5 p-3">
 <div class="row">
     <h2 class="text-center">Latest News</h2>
+      <div class="underline"></div>
 <div class="card-group">
-    <div class="card col-md-4 p-3">
-      <img src="assets/images/woman-new.jpg" class="card-img-top" alt="...">
+    <div class="card col-md-4 p-3" *ngFor="let x of data">
+      <img src="{{x.imgSrc}}" class="card-img-top" [alt]="x.imgAlt">
       <div class="card-body">
-        <h5 class="card-title">What Curling Irons Are The Best Ones</h5>
-        <p class="card-text">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <a href="" class="read-more"><b>Read More</b></a>
-      </div>
-    </div>
-    <div class="card col-md-4 p-3">
-      <img src="assets/images/woman-new.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Vogue's Ultimate Guide To Autumn/ Winter 2019 Shoes</h5>
-        <p class="card-text">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <a href="" class="read-more"><b>Read More</b></a>
-      </div>
-    </div>
-    <div class="card col-md-4 p-3">
-      <img src="assets/images/woman-new.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">What Curling Irons Are The Best Ones.Check this out</h5>
-        <p class="card-text">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <a href="" class="read-more"><b>Read More</b></a>
+        <h5 class="card-title">{{x.newsTitle}}</h5>
+        <p class="card-text">{{x.newsParagraph}}</p>
+        <a href="{{x.readMoreHref}}" class="read-more"><b>Read More</b></a>
       </div>
     </div>
   </div>
