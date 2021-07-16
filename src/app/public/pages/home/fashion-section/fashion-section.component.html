@@ -1,28 +1,10 @@
 <div class="container pt-5">
     <div class="row">
-      <div class="col-sm-6 col-md-4 pb-5">
+      <div class="col-sm-4 col-md-4 pb-5" *ngFor="let x of fashionData">
         <div class="card">
-          <a href=""><img src="assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg" class="card-img" alt="...">
+          <a href="{{x.fashionHref}}"><img src="{{x.imgSrc}}" class="card-img" alt="x.imgAlt">
           <div class="card-img-overlay">
-            <h5 class="card-title">Women's Fashion</h5>
-          </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 pb-5">
-        <div class="card">
-          <a href=""><img src="assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg" class="card-img" alt="...">
-          <div class="card-img-overlay">
-            <h5 class="card-title">Men's Fashion</h5>
-          </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-4 pb-5">
-        <div class="card">
-          <a href=""><img src="assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg" class="card-img" alt="...">
-          <div class="card-img-overlay">
-            <h5 class="card-title">Just Fashion</h5>
+            <h5 class="card-title">{{x.fashionTitle}}</h5>
           </div>
           </a>
         </div>

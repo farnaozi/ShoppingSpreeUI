@@ -3,16 +3,38 @@
 }
 .read-more {
     text-decoration: none;
-    color:black;
+    color:rgb(0, 0, 0);
     border-bottom: 3px solid rgb(241, 0, 0);
     transition: 0.2s;
 }
 .read-more:hover {
     border-bottom: 3px solid rgb(255, 0, 0);
-    text-shadow: 1px 1px 3px rgb(116, 116, 116);
+    text-shadow: 1px 1px 3px rgb(184, 184, 184);
 
 }
-.row .text-center {
-    border-bottom: 3px solid rgb(255, 0, 0);
+.underline {
+    margin: 0 auto;
+    width: 200px;
+    border-top: 4px solid red;
+    display: inline-block;
+    margin-bottom: 8px;
+
 }
+
+@media all and (max-width:767px){
+    .container{
+        max-width: 750px;
+        width:100%;
+    }
+}
+
+@media all and (max-width:992px){
+    .container{
+        max-width: 900px;
+        width:100%;
+    }
+}
+
+
+
 
