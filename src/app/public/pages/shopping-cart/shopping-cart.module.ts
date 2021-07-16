@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShoppingCartComponent } from './shopping-cart.component';
 import { TableComponent } from './table/table.component';
 import { ActionButtonsComponent } from './action-buttons/action-buttons.component';
+import { SheredComponentsModule } from 'src/app/shared/modules/shered-components.module';
 
 
 
@@ -13,7 +14,8 @@ import { ActionButtonsComponent } from './action-buttons/action-buttons.componen
     ActionButtonsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SheredComponentsModule
   ],
   exports:[
     ShoppingCartComponent

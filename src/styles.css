@@ -96,3 +96,12 @@ font-family: 'ABeeZee', sans-serif!important;
     border-radius: 50%;
     margin-left: 4px;
 }
+
+.underline {
+    margin: 0 auto;
+    width: 200px;
+    border-top: 4px solid red;
+    display: inline-block;
+    margin-bottom: 8px;
+
+}

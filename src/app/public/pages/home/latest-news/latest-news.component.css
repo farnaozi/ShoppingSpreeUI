@@ -12,14 +12,6 @@
     text-shadow: 1px 1px 3px rgb(184, 184, 184);
 
 }
-.underline {
-    margin: 0 auto;
-    width: 200px;
-    border-top: 4px solid red;
-    display: inline-block;
-    margin-bottom: 8px;
-
-}
 
 @media all and (max-width:767px){
     .container{

@@ -10,9 +10,7 @@ import { FashionSectionComponent } from './pages/home/fashion-section/fashion-se
 import { ProductsModule } from './pages/products/products.module';
 import { ShoppingCartModule } from './pages/shopping-cart/shopping-cart.module';
 import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
-import { ProductsCarouselComponent } from '../shared/components/products-carousel/products-carousel.component';
 import { PublicComponent } from './public.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -27,14 +25,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FashionSectionComponent,
     
     BreadcrumbComponent,
-    ProductsCarouselComponent,
   
     PublicComponent],
   imports: [
     CommonModule,
     ProductsModule,
-    ShoppingCartModule,
-    CarouselModule
+    ShoppingCartModule
   ],
   exports: [
     PublicComponent

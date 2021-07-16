@@ -7,8 +7,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./products-carousel.component.css']
 })
 export class ProductsCarouselComponent implements OnInit {
-  @Input() title:string = "Newest Products";
+  @Input() title:string = "";
   @Input() data:number[] = [1,2,3,4,5,6];
+  @Input() centerTitle:boolean = false;
+  @Input() width:string = "";
   constructor() { }
 
   ngOnInit(): void {
