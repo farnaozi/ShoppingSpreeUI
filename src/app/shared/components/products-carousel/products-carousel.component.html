@@ -3,6 +3,11 @@
         <div class="col-12">
             <p class="title-with-left-redline">{{title}}</p>
             <hr class="hr">
+            <p class="standard-title" *ngIf="!centerTitle">{{title}}</p>
+            <div *ngIf="centerTitle" class="center-title text-center" >
+                <p>{{title}}</p>
+                <div [style.width]="width" class="underline"></div>
+            </div>
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide *ngFor="let product of data; let i = index" class="product-card">
                     <div class="product-image">

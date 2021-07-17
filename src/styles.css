@@ -105,3 +105,12 @@ body{
     margin-top: 20px;
     font-size: 24px;
 }
+
+.underline {
+    margin: 0 auto;
+    width: 200px;
+    border-top: 4px solid red;
+    display: inline-block;
+    margin-bottom: 8px;
+
+}
