@@ -1,0 +1,11 @@
+@media (max-width:1400px) and (min-width:992px){
+    .hide-content {
+        display: none;
+    }
+}
+
+@media (max-width:1199px) {
+    img {
+        margin-top: 20px;
+    }
+}
