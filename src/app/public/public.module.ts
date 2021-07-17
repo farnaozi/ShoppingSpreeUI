@@ -13,6 +13,8 @@ import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.
 import { ProductsCarouselComponent } from '../shared/components/products-carousel/products-carousel.component';
 import { PublicComponent } from './public.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HotSalesComponent } from './pages/home/hot-sales/hot-sales.component';
+import { TopBrandsComponent } from './pages/home/top-brands/top-brands.component';
 
 
 
@@ -29,7 +31,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     BreadcrumbComponent,
     ProductsCarouselComponent,
   
-    PublicComponent],
+    PublicComponent,
+        HotSalesComponent,
+        TopBrandsComponent],
   imports: [
     CommonModule,
     ProductsModule,

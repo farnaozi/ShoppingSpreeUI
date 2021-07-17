@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 body{
-font-family: 'ABeeZee', sans-serif!important;
+    font-family: 'ABeeZee', sans-serif!important;
+    overflow-x: hidden;
 }
 
 /*product-card*/
@@ -95,4 +96,12 @@ font-family: 'ABeeZee', sans-serif!important;
     display: inline-block;
     border-radius: 50%;
     margin-left: 4px;
+}
+
+.title-with-left-redline {
+    border-left: 3px solid red;
+    padding-left: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 24px;
 }

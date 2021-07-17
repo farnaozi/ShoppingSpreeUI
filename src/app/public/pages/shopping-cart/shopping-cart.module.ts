@@ -4,8 +4,6 @@ import { ShoppingCartComponent } from './shopping-cart.component';
 import { TableComponent } from './table/table.component';
 import { ActionButtonsComponent } from './action-buttons/action-buttons.component';
 
-
-
 @NgModule({
   declarations: [
     ShoppingCartComponent,
@@ -19,4 +17,5 @@ import { ActionButtonsComponent } from './action-buttons/action-buttons.componen
     ShoppingCartComponent
   ]
 })
+
 export class ShoppingCartModule { }
