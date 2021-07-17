@@ -1,9 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p class="title-with-left-redline">{{title}}</p>
-            <hr class="hr">
-            <p class="standard-title" *ngIf="!centerTitle">{{title}}</p>
+            <div *ngIf="!centerTitle">
+                <p class="standard-title">{{title}}</p>
+                <hr class="hr">
+            </div>
             <div *ngIf="centerTitle" class="center-title text-center" >
                 <p>{{title}}</p>
                 <div [style.width]="width" class="underline"></div>

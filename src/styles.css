@@ -3,6 +3,7 @@
 
 body{
     font-family: 'ABeeZee', sans-serif!important;
+    width:100%;
     overflow-x: hidden;
 }
 
@@ -98,24 +99,25 @@ body{
     margin-left: 4px;
 }
 
-.title-with-left-redline {
-    border-left: 3px solid red;
-    padding-left: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    font-size: 24px;
-}
-
 .underline {
     margin: 0 auto;
     width: 200px;
     border-top: 4px solid red;
     display: inline-block;
     margin-bottom: 30px;
-    margin-top: -10px;
+    margin-top: 5px;
 }
 
-.title-with-bottom-redline {
+.standard-title{
+    border-left: 3px solid red;
+    padding-left: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.center-title p{
+    margin-bottom: 0;
     font-weight: bold;
     font-size: 24px;
 }
