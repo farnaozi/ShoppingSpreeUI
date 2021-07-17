@@ -111,6 +111,11 @@ body{
     width: 200px;
     border-top: 4px solid red;
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
 
+.title-with-bottom-redline {
+    font-weight: bold;
+    font-size: 24px;
 }

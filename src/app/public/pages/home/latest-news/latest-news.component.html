@@ -1,7 +1,9 @@
 <div class="container mt-5 p-3">
 <div class="row">
-    <h2 class="text-center">Latest News</h2>
-      <div class="underline"></div>
+  <div class="text-center">
+    <p class="title-with-bottom-redline">Latest News</p>
+    <div class="underline"></div>
+</div>
 <div class="card-group">
     <div class="card col-md-4 p-3" *ngFor="let x of data">
       <img src="{{x.imgSrc}}" class="card-img-top" [alt]="x.imgAlt">
