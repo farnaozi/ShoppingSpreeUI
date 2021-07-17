@@ -1,15 +1,5 @@
-
-p{
+.center-title p{
+    margin-bottom: 0;
     font-weight: bold;
     font-size: 24px;
 }
-.standard-title{
-    border-left: 3px solid red;
-    padding-left: 5px;
-    margin-top: 20px;
-}
-
-.center-title p{
-    margin-bottom: 0;
-}
-
