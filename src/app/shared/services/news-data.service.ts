@@ -31,6 +31,14 @@ export class NewsDataService {
             newsTitle: "What Curling Irons Are The Best Ones.Check this out",
             newsParagraph: "Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..",
             readMoreHref: "#"
+        },
+        {
+            id: 3,
+            imgSrc: "assets/images/woman-234.jpg",
+            imgAlt: "...",
+            newsTitle: "What Curling Irons Are The Best Ones.Check this out",
+            newsParagraph: "Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..",
+            readMoreHref: "#"
         }
     ]
 }

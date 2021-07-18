@@ -1,18 +1,20 @@
-<div class="container mt-5 p-3">
-<div class="row">
-  <div class="text-center center-title">
-    <p>Latest News</p>
-    <div class="underline"></div>
-</div>
-<div class="card-group">
-    <div class="card col-md-4 p-3" *ngFor="let x of data">
-      <img src="{{x.imgSrc}}" class="card-img-top" [alt]="x.imgAlt">
-      <div class="card-body">
-        <h5 class="card-title">{{x.newsTitle}}</h5>
-        <p class="card-text">{{x.newsParagraph}}</p>
-        <a href="{{x.readMoreHref}}" class="read-more"><b>Read More</b></a>
+<div class="container-fluid p-5">
+  <div class="row">
+    <div class="text-center center-title">
+      <p>Latest News</p>
+      <div class="underline"></div>
+    </div>
+    <div class="card-group">
+      <div class="col-sm-6 col-lg-3" *ngFor="let x of data">
+        <div class="card p-3">
+          <img src="{{x.imgSrc}}" class="card-img-top" [alt]="x.imgAlt">
+          <div class="card-body">
+            <h5 class="card-title">{{x.newsTitle}}</h5>
+            <p class="card-text">{{x.newsParagraph}}</p>
+            <a href="{{x.readMoreHref}}" class="read-more"><b>Read More</b></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
