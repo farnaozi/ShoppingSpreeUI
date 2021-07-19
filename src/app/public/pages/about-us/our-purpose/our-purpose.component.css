@@ -1,0 +1,13 @@
+.social-icons a{
+    background-color: #EEEEEE;
+    padding:15px 18px;
+    transition: 0.4s;
+}
+
+.social-icons i {
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    background-color:rgb(170, 170, 170);
+}

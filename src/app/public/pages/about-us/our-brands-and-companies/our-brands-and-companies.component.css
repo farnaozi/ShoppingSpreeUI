@@ -1,0 +1,9 @@
+.row .border-right  {
+    border-right: 2px solid rgb(231, 231, 231);
+}
+
+@media screen and (max-width:992px) {
+    .row .border-right  {
+        border-right: none;
+    }
+}
