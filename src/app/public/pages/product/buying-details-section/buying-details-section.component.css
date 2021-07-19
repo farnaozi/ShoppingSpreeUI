@@ -1,0 +1,67 @@
+p{
+    margin-bottom: 0px;
+}
+
+.product-size-box{
+    text-align: center;
+    border: 1px solid #9f9f9f;
+    border-radius: 3px;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.product-size-box:hover{
+    background-color: black;
+    color: white;
+}
+
+.product-size-active{
+    background-color: black;
+    color: white;
+}
+
+.color{
+    height: 37px!important;
+    width: 37px!important;
+    background-color: black;
+    border: 2px solid #c9c9c9;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.color:hover{
+    opacity: 0.8;
+}
+
+.add-to-cart{
+    font-size: 13;
+    background-color: black;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: opacity 0.3s;
+}
+
+.add-to-cart:hover{
+    opacity: 0.8;
+}
+
+.buy-now{
+    color: white;
+    background-color: #BD2727;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: opacity 0.3s;
+}
+
+.buy-now:hover{
+    opacity: 0.8;
+}
+
+.payment-methods i{
+    font-size: 36px;
+    margin-right: 5px;
+}

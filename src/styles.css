@@ -121,3 +121,16 @@ body{
     font-weight: bold;
     font-size: 24px;
 }
+
+.primary-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.secondary-title{
+    font-size: 16px;
+}
+
+.secondary-background{
+    background-color: #f4f4f4;
+}

@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-3">
+        <div class="images-scroll">
+            <div class="row">
+                <div class="col-12">
+                    <div *ngFor="let image of [1,2,3,4,5]" class="text-center side-image-box">
+                        <img [class.border]="image == 1" src="/assets/images/product-3.jpg" alt="product">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-9 image-section-box">
+        <div class="product-image"></div>
+    </div>
+</div>
