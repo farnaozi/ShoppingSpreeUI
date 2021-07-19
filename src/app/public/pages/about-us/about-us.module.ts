@@ -9,10 +9,10 @@ import { OurBrandsAndCompaniesComponent } from './our-brands-and-companies/our-b
 @NgModule({
   declarations: [
     AboutOurCompanyComponent,
-    AboutUsComponent,
     OurPurposeComponent,
     MeetOurTeamComponent,
     OurBrandsAndCompaniesComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,
