@@ -1,0 +1,21 @@
+.row .btn {
+    background-color: #B00000;
+    border:none;
+    color:white;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.row .btn:hover {
+    background-color: #000000;
+}
+
+.read-more{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(241, 0, 0);
+    transition: 0.4s;
+}
+.read-more:hover {
+    border-bottom: 3px solid rgb(255, 0, 0);
+    text-shadow: 1px 1px 3px rgb(168, 168, 168);
+}
