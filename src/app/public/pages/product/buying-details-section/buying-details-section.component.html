@@ -1,70 +1,71 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <p class="primary-title">Piqué Biker Jacket</p>
+<div class="row">
+    <div class="col-12">
+        <p class="primary-title">Piqué Biker Jacket</p>
+    </div>
+</div>
+<hr class="hr">
+<div class="row">
+    <div class="col-6">
+        <p class="primary-title">$15.00</p>
+    </div>
+    <div class="col-6 align-middle">
+        <div class="float-end product-stars">
+            <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
+            <span style="color: #9f9f9f;" class="secondary-title"> (4 Reviews)</span>
         </div>
     </div>
-    <hr class="hr">
-    <div class="row">
-        <div class="col-6">
-            <p class="primary-title">$15.00</p>
-        </div>
-        <div class="col-6 align-middle">
-            <div class="float-end product-stars">
-                <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
-                <span style="color: #9f9f9f;" class="secondary-title"> (4 Reviews)</span>
+</div>
+<hr class="hr">
+<div class="row pb-3 pt-4">
+    <div class="col-12">
+        <span class="secondary-title"><strong>Size: </strong></span>
+        <span [class.product-size-active]="i==1" *ngFor="let size of ['XXL','XL','L','S']; let i=index;"
+            class="product-size-box">{{size}}</span>
+    </div>
+</div>
+<div class="row pb-4">
+    <div class="col-7">
+        <div class="row">
+            <div class="col-2 my-auto">
+                <span class="secondary-title"><strong>Color: </strong></span>
+            </div>
+            <div class="col-10 my-auto text-nowrap">
+                <span *ngFor="let color of ['black', '#20315F', '#F1AF4D', '#ED1C24','white'];" class="color"
+                    [style.background-color]="color"></span>
             </div>
         </div>
     </div>
-    <hr class="hr">
-    <div class="row pb-3 pt-4">
-        <div class="col-12">
-            <span class="secondary-title"><strong>Size: </strong></span> 
-            <span [class.product-size-active]="i==1"  *ngFor="let size of ['XXL','XL','L','S']; let i=index;" class="product-size-box">{{size}}</span>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button class="btn ps-0">
+            <i class="fa fa-heart-o" aria-hidden="true"></i> ADD TO WISHLIST
+        </button>
+    </div>
+</div>
+<div class="row pb-4">
+    <div class="col-12 text-nowrap">
+        <input type="number" style="width: 100px;" class="form-control form-control-lg d-inline">
+        <button class="btn add-to-cart d-inline mx-2 btn-lg">ADD TO CART</button>
+        <button class="btn buy-now d-inline btn-lg">BUY NOW</button>
+    </div>
+</div>
+<hr class="hr">
+<div class="row">
+    <div class="col-12">
+        <div class="secondary-background ">
+            <p><strong>Shipping methods</strong></p>
+            <p>Free Shipping - 7-14 Days</p>
+            <p>Fast ($25.00) - 1-3 Days</p>
         </div>
     </div>
-    <div class="row pb-4">
-        <div class="col-7">
-            <div class="row">
-                <div class="col-2 my-auto">
-                    <span class="secondary-title"><strong>Color: </strong></span> 
-                </div>
-                <div class="col-10 my-auto text-nowrap">
-                    <span *ngFor="let color of ['black', '#20315F', '#F1AF4D', '#ED1C24','white'];"
-                     class="color" [style.background-color]="color"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <button class="btn ps-0">
-                <i class="fa fa-heart-o" aria-hidden="true"></i> ADD TO WISHLIST
-            </button>
-        </div>
-    </div>
-    <div class="row pb-4">
-        <div class="col-12 text-nowrap" >
-         <input type="number" style="width: 100px;" class="form-control form-control-lg d-inline">  
-         <button class="btn add-to-cart d-inline mx-2 btn-lg">ADD TO CART</button> 
-         <button class="btn buy-now d-inline btn-lg">BUY NOW</button> 
-        </div>
-    </div>
-    <hr class="hr">
-    <div class="row">
-        <div class="col-12">
-            <div class="secondary-background">
-                test
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 payment-methods">
-            <i class="fa fa-cc-stripe" aria-hidden="true"></i>
-            <i class="fa fa-cc-paypal" aria-hidden="true"></i>
-            <i class="fa fa-cc-visa" aria-hidden="true"></i>
-            <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
-            <i class="fa fa-cc-discover" aria-hidden="true"></i>
-        </div>
+</div>
+<div class="row">
+    <div class="col-12 payment-methods">
+        <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        <i class="fa fa-cc-discover" aria-hidden="true"></i>
     </div>
 </div>
