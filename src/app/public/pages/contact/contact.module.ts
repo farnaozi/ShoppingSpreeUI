@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { OurLocationComponent } from './our-location/our-location.component';
 import { ContactComponent } from './contact.component';
 import { SendMessageComponent } from './send-message/send-message.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,8 @@ import { SendMessageComponent } from './send-message/send-message.component';
     SendMessageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     ContactComponent

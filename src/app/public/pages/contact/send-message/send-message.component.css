@@ -19,3 +19,11 @@
     border-bottom: 3px solid rgb(255, 0, 0);
     text-shadow: 1px 1px 3px rgb(168, 168, 168);
 }
+
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched {
+    border:1px solid rgb(255, 0, 0);
+}
+
+.help-block {
+    color:#ec0000;
+}
