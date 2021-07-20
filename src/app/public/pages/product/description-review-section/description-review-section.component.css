@@ -1,0 +1,52 @@
+.row{
+    --bs-gutter-x:0;
+}
+.review-star{
+    cursor: pointer;
+}
+
+.review-star-color{
+    color: #ffc510;
+}
+
+.submit-review{
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: opacity 0.3s;
+}
+
+.submit-review:hover{
+    opacity: 0.8;
+}
+
+.review-box{
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+  }
+
+  .load-more-review{
+      color:red;
+      cursor: pointer;
+      transition: opacity 0.3s;
+  }
+
+  .load-more-review:hover{
+      opacity: 0.8;
+  }
+
+
+
