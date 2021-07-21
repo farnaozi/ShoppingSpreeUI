@@ -1,0 +1,14 @@
+h6 {
+    margin-top: -16px;
+}
+
+.dashboard {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 4px;
+}
+
+.edit {
+    text-decoration: none;
+    color:rgb(255, 0, 0);
+}
+
