@@ -7,14 +7,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./send-message.component.css']
 })
 export class SendMessageComponent implements OnInit {
-  sendMessageForm: FormGroup;
+  sendMessageForm: FormGroup = new FormGroup({
+    'fullname': new FormControl('', Validators.required),
+    'emailAddress': new FormControl('', [Validators.required, Validators.email]),
+    'messageComment': new FormControl('', [Validators.required,Validators.minLength(20)])
+  });
 
   constructor() {
-    this.sendMessageForm = new FormGroup({
-      'fullname': new FormControl('', Validators.required),
-      'emailAddress': new FormControl('', [Validators.required, Validators.email]),
-      'messageComment': new FormControl('', [Validators.required,Validators.minLength(20)])
-    });
+   
   }
 
   ngOnInit(): void {

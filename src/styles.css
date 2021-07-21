@@ -134,3 +134,28 @@ body{
 .secondary-background{
     background-color: #f4f4f4;
 }
+
+.default-button {
+    background-color: #B00000;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    float: right;
+    border:none;
+    padding: 7px 14px;
+    border-radius: 4px;
+}
+.default-button:hover {
+    background-color: #000000;
+}
+
+.mat-tab-group {
+    font-family: inherit !important;
+}
+
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: inherit;
+}
+
+table thead {
+    background-color: #f9f9f9;
+}
