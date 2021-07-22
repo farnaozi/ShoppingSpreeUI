@@ -4,15 +4,14 @@ import { ProductsCarouselComponent } from '../components/products-carousel/produ
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
-
 @NgModule({
   declarations: [ProductsCarouselComponent],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
   ],
   exports:[
-    ProductsCarouselComponent
+    ProductsCarouselComponent,
   ]
 })
 export class SheredComponentsModule { }

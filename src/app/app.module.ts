@@ -10,6 +10,7 @@ import { LoginRegisterModule } from './shared/components/login-register/login-re
 import { QuickViewComponent } from './shared/components/quick-view/quick-view.component';
 import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +24,9 @@ import { QuickViewModule } from './shared/components/quick-view/quick-view.modul
     QuickViewModule
   ],
   providers: [],
-  entryComponents:[LoginRegisterComponent, QuickViewComponent],
+  entryComponents:[LoginRegisterComponent, QuickViewComponent,
+    LoginRegisterModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

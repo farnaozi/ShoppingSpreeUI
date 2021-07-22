@@ -6,8 +6,6 @@ import { DescriptionReviewSectionComponent } from './description-review-section/
 import { MaterialModule } from 'src/app/shared/modules/material.module';
 import { QuickViewModule } from 'src/app/shared/components/quick-view/quick-view.module';
 
-
-
 @NgModule({
   declarations: [ProductComponent, DescriptionReviewSectionComponent],
   imports: [

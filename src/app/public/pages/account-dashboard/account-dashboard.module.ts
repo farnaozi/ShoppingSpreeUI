@@ -5,17 +5,19 @@ import { AccountDashboardComponent } from './account-dashboard.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
+import { MyWishlistModule } from '../my-wishlist/my-wishlist.module';
 
 @NgModule({
   declarations: [
     AccountInfoComponent,
     AccountDashboardComponent,
     OrderHistoryComponent,
-    WishListComponent
+    WishListComponent,
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    MyWishlistModule
   ],
   exports: [
     AccountDashboardComponent

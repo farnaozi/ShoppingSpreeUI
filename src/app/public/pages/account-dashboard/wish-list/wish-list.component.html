@@ -2,57 +2,7 @@
     <div class="row">
         <mat-tab-group color="#B00000" mat-align-tabs="start">
             <mat-tab label="My WishList">
-                <div class="scrollme">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col"></th>
-                                <th scope="col" style="padding-left:26px">Quantity</th>
-                                <th scope="col">Total</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let product of [1,2,3]">
-                                <td style="width: 100px;">
-                                    <img src="/assets/images/product-3.jpg" class="product-image" alt="">
-                                </td>
-                                <td>
-                                    <div class="cart-product-desc">
-                                        <p>Piqué Biker Jacket</p>
-                                        <strong>$15.00</strong>
-                                        <p>Color: <span
-                                            [style.background-color]="'#5E64D1'" class="color"></span></p>
-                                        <p>Size:<strong> M</strong></p>
-                                    </div>Photo by <a href="https://unsplash.com/@dylu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jacek Dylag</a> on <a href="https://unsplash.com/s/photos/shopping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-                                </td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button class="btn" type="button">
-                                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                                        </button>
-                                        <button disabled class="btn">
-                                            <strong>1</strong>
-                                        </button>
-                                        <button class="btn" type="button">
-                                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                                        </button>
-                                      </div>
-                                </td>
-                                <td>
-                                    <strong>$15.00</strong>
-                                </td>
-                                <td>
-                                    <button class="btn cart-delete float-end">X</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <strong style="float: left;padding-top: 7px;">Total Price: $120.75</strong>
-                <button type="button" style="float: right;" class="default-button">Check Out</button>
-            </div>
+                <app-my-wishlist></app-my-wishlist>
             </mat-tab>
             <mat-tab label="Newsletters">
                 <p class="pt-3">

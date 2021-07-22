@@ -9,14 +9,14 @@ export class FashionDataService {
         return [
         {
             id: 0,
-            imgSrc: "assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg",
+            imgSrc: "assets/images/woman-2564660_1920.jpg",
             imgAlt: "...",
             fashionTitle: "Women's Fashion",
             fashionHref: "#"
         },
         {
             id: 1,
-            imgSrc: "assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg",
+            imgSrc: "assets/images/lonely-814631_1920.jpg",
             imgAlt: "...",
             fashionTitle: "Men's Fashion",
             fashionHref: "#"
@@ -24,7 +24,7 @@ export class FashionDataService {
         },
         {
             id: 2,
-            imgSrc: "assets/images/jacek-dylag-jo8C9bt3uo8-unsplash.jpg",
+            imgSrc: "assets/images/clothing-store-984396_1920 (1).jpg",
             imgAlt: "...",
             fashionTitle: "Just Fashion",
             fashionHref: "#"
