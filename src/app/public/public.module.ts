@@ -17,6 +17,10 @@ import { TopBrandsComponent } from './pages/home/top-brands/top-brands.component
 import { CheckoutModule } from './pages/checkout/checkout.module';
 import { SheredComponentsModule } from '../shared/modules/shered-components.module';
 import { HomeModule } from './pages/home/home.module';
+import { ProductComponent } from './pages/product/product.component';
+import { ProductModule } from './pages/product/product.module';
+import { ContactModule } from './pages/contact/contact.module';
+import { AboutUsModule } from './pages/about-us/about-us.module';
 
 
 
@@ -26,14 +30,18 @@ import { HomeModule } from './pages/home/home.module';
     FooterComponent,
     NavbarComponent,
     BreadcrumbComponent,
-    PublicComponent,],
+    PublicComponent
+    ],
   imports: [
     CommonModule,
     ProductsModule,
     ShoppingCartModule,
     CheckoutModule,
     SheredComponentsModule,
-    HomeModule
+    HomeModule,
+    ProductModule,
+    ContactModule,
+    AboutUsModule 
   ],
   exports: [
     PublicComponent

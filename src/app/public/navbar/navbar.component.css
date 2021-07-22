@@ -168,6 +168,7 @@
     text-shadow: 2px 2px 4px rgb(126, 126, 126);
 }
 
+
   .shopping-cart-dropbtn {
     position: relative;
     display: inline-block;
@@ -238,4 +239,9 @@
     background-color: #ed0000;
     color: white;
   }
+
+
+.sticky-top{
+    z-index: 800!important;
+}
 

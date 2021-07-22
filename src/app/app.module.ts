@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicModule } from './public/public.module';
+import { LoginRegisterComponent } from './shared/components/login-register/login-register.component';
+import { LoginRegisterModule } from './shared/components/login-register/login-register.module';
+import { QuickViewComponent } from './shared/components/quick-view/quick-view.component';
+import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +18,12 @@ import { PublicModule } from './public/public.module';
     BrowserModule,
     AppRoutingModule,
     PublicModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LoginRegisterModule,
+    QuickViewModule
   ],
   providers: [],
+  entryComponents:[LoginRegisterComponent, QuickViewComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -99,6 +99,10 @@ body{
     margin-left: 4px;
 }
 
+.color:first-child{
+    margin-left: 0px!important;
+}
+
 .underline {
     margin: 0 auto;
     width: 200px;
