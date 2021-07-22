@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicModule } from './public/public.module';
 import { LoginRegisterComponent } from './shared/components/login-register/login-register.component';
 import { LoginRegisterModule } from './shared/components/login-register/login-register.module';
+import { QuickViewComponent } from './shared/components/quick-view/quick-view.component';
+import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,11 @@ import { LoginRegisterModule } from './shared/components/login-register/login-re
     AppRoutingModule,
     PublicModule,
     BrowserAnimationsModule,
-    LoginRegisterModule
+    LoginRegisterModule,
+    QuickViewModule
   ],
   providers: [],
-  entryComponents:[LoginRegisterComponent],
+  entryComponents:[LoginRegisterComponent, QuickViewComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

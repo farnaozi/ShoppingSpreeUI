@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product.component';
 import { SheredComponentsModule } from 'src/app/shared/modules/shered-components.module';
-import { ImagesSectionComponent } from './images-section/images-section.component';
 import { DescriptionReviewSectionComponent } from './description-review-section/description-review-section.component';
-import { BuyingDetailsSectionComponent } from './buying-details-section/buying-details-section.component';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
+import { QuickViewModule } from 'src/app/shared/components/quick-view/quick-view.module';
 
 
 
 @NgModule({
-  declarations: [ProductComponent, ImagesSectionComponent, DescriptionReviewSectionComponent, BuyingDetailsSectionComponent],
+  declarations: [ProductComponent, DescriptionReviewSectionComponent],
   imports: [
     CommonModule,
     SheredComponentsModule,
-    MaterialModule
+    MaterialModule,
+    QuickViewModule
   ],
   exports:[ProductComponent]
 })

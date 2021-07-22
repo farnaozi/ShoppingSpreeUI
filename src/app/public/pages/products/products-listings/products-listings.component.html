@@ -1,29 +1,30 @@
 <div class="row">
-    <div *ngFor="let product of [1,2,3,4,5,6]; let i = index" class="col-xl-4 col-lg-6 product-card">
+    <div *ngFor="let product of products; let i = index" class="col-xl-4 col-lg-6 product-card">
         <div class="product-image">
-            <span *ngIf="i%2!=0" class="sale-sign">20% OFF</span>
+            <span *ngIf="product.salePrice != undefined" class="sale-sign">
+                {{(product.salePrice/product.price)*100 | number: '1.0-0'}}% OFF
+            </span>
         </div>
         <div class="row product-desc">
             <div class="col-12">
                 <div class="float-start">
-                    <div class="product-name">Piqué Biker Jacket</div>
+                    <div class="product-name">{{product.name}}</div>
                     <div class="product-stars">
                         <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
                     </div>
-                    <div *ngIf="i%2==0" class="current-product-price">$15.00</div>
-                    <div *ngIf="i%2!=0" class="sale">
-                        <span class="sale-price current-product-price">$10.00 </span>
-                        <span class="normal-price">$15.00</span>
+                    <div *ngIf="product.salePrice == undefined" class="current-product-price">${{product.price}}.00</div>
+                    <div *ngIf="product.salePrice != undefined" class="sale">
+                        <span class="sale-price current-product-price">${{product.salePrice}}.00 </span>
+                        <span class="normal-price">${{product.price}}.00</span>
                     </div>
                 </div>
                 <div class="float-end">
                   <div class="colors">
-                      <div [style.background-color]="'#5E64D1'" class="color"></div>
-                      <div [style.background-color]="'#404A47'" class="color"></div>
-                      <div [style.background-color]="'#D5A667'" class="color"></div>
+                      <div *ngFor="let color of product.colors" [style.background-color]="color" class="color"></div>
+
                   </div>
                   <div class="buttons">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <i (click)="openQuickView()" class="fa fa-eye" aria-hidden="true"></i>
                     <i class="fa fa-heart-o" aria-hidden="true"></i>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                   </div>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-products-carousel',
@@ -11,9 +12,13 @@ export class ProductsCarouselComponent implements OnInit {
   @Input() data:number[] = [1,2,3,4,5,6];
   @Input() centerTitle:boolean = false;
   @Input() width:string = "";
-  constructor() { }
+  constructor(private modalService:ModalService) { }
 
   ngOnInit(): void {
+  }
+
+  openQuickView(){
+    this.modalService.openQuickView();
   }
 
   customOptions: OwlOptions = {
