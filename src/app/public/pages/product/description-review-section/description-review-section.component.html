@@ -1,4 +1,4 @@
-<mat-tab-group color="accent" mat-align-tabs="start">
+<mat-tab-group color="warn" mat-align-tabs="start">
     <mat-tab label="Description">
         <p class="pt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil
@@ -24,33 +24,29 @@
     <mat-tab label="Reviews (2)">
         <div class="row pt-3">
             <div class="col-12">
-                <span>Review: </span> <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star review-star"
+                <span>Review: </span> <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star-o review-star"
                     aria-hidden="true"></i>
             </div>
         </div>
-        <div class="row pt-2">
+        <div class="row pt-3">
             <div class="col-4">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="firstName">
+                <input placeholder="First Name" type="text" class="form-control" id="firstName">
             </div>
             <div class="col-4 px-3">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lastName">
+                <input placeholder="Last Name" type="text" class="form-control" id="lastName">
             </div>
             <div class="col-4">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
+                <input placeholder="Email" type="email" class="form-control" id="email">
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-12">
+                <textarea placeholder="Your Review" id="review" class="form-control" rows="5"></textarea>
             </div>
         </div>
         <div class="row pt-2">
             <div class="col-12">
-                <label for="review" class="form-label">Your Review</label>
-                <textarea id="review" class="form-control" rows="5"></textarea>
-            </div>
-        </div>
-        <div class="row pt-2">
-            <div class="col-12">
-                <button class="btn submit-review">Submit Your Review</button>
+                <button class="btn submit-review">Submit</button>
             </div>
         </div>
         <hr class="hr my-5">

@@ -166,3 +166,7 @@
 .position-absolute:hover {
     text-shadow: 2px 2px 4px rgb(126, 126, 126);
 }
+
+.sticky-top{
+    z-index: 800!important;
+}

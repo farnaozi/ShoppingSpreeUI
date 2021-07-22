@@ -46,19 +46,19 @@ p{
 }
 
 .add-to-cart:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .buy-now{
     color: white;
-    background-color: #BD2727;
+    background-color: #B00000;
     padding-left: 30px;
     padding-right: 30px;
     transition: opacity 0.3s;
 }
 
 .buy-now:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .payment-methods i{

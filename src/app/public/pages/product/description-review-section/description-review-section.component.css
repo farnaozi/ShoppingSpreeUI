@@ -11,14 +11,14 @@
 
 .submit-review{
     color: white;
-    background-color: black;
+    background-color: #B00000;
     padding-left: 30px;
     padding-right: 30px;
     transition: opacity 0.3s;
 }
 
 .submit-review:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .review-box{

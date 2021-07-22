@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicModule } from './public/public.module';
+import { LoginRegisterComponent } from './shared/components/login-register/login-register.component';
+import { LoginRegisterModule } from './shared/components/login-register/login-register.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,11 @@ import { PublicModule } from './public/public.module';
     BrowserModule,
     AppRoutingModule,
     PublicModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LoginRegisterModule
   ],
   providers: [],
+  entryComponents:[LoginRegisterComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
