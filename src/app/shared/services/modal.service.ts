@@ -18,8 +18,7 @@ export class ModalService {
   }
 
   openQuickView(){
-    return this.openDialog(QuickViewComponent, 
-              { height:"700px", position: {top:"30px"}})
+    return this.openDialog(QuickViewComponent)
   }
 
   closeAll(){

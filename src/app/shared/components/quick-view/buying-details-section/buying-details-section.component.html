@@ -1,6 +1,13 @@
 <div class="row">
-    <div class="col-12">
+    <div class="col-sm-6 col-12">
         <p class="primary-title">Piqué Biker Jacket</p>
+    </div>
+    <div class="col-6 payment-methods text-end d-none d-sm-block">
+        <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        <i class="fa fa-cc-discover" aria-hidden="true"></i>
     </div>
 </div>
 <hr class="hr">
@@ -16,7 +23,7 @@
     </div>
 </div>
 <hr class="hr">
-<div class="row pb-3 pt-4">
+<div class="row pb-3 pt-1">
     <div class="col-12">
         <span class="secondary-title"><strong>Size: </strong></span>
         <span [class.product-size-active]="i==1" *ngFor="let size of ['XXL','XL','L','S']; let i=index;"
@@ -26,13 +33,12 @@
 <div class="row pb-4">
     <div class="col-7">
         <div class="row">
-            <div class="col-xl-2 col-lg-3 col-md-2 col-3 my-auto">
-                <span class="secondary-title"><strong>Color: </strong></span>
-            </div>
-            <div class="col-xl-10 col-lg-9 col-md-10 col-9 my-auto text-nowrap ps-0">
-                <span *ngFor="let color of ['black', '#20315F', '#F1AF4D', '#ED1C24','white'];" class="color"
+            <div class="col-12 text-nowrap my-auto">
+                <span class="secondary-title"><strong>Color:</strong></span>
+                <span *ngFor="let color of ['black', '#20315F', '#F1AF4D', '#ED1C24','white'];" class="color py-auto"
                     [style.background-color]="color"></span>
             </div>
+
         </div>
     </div>
 </div>
@@ -43,7 +49,7 @@
         </button>
     </div>
 </div>
-<div class="row pb-4">
+<div class="row pb-1">
     <div class="col-12">
         <div style="max-width: 450px;" class="input-group">
             <input type="number" class="form-control form-control-lg d-inline me-2 mt-2">
@@ -56,17 +62,18 @@
 <hr class="hr">
 <div class="row mb-2">
     <div class="col-12">
-        <div class="secondary-background ">
+        <div class="secondary-background">
             <div class="py-3 px-3">
                 <p><strong>Shipping methods</strong></p>
-                <p><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Quibusdam nisi maxime nostrum, officiis odio, quae ut sapiente
-                    assumenda, maiores dolores adipisci dicta hic quod nam sequi sed suscipit. Velit, accusamus?</p>
+                <p><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit, amet<br>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> online service 24/7 - Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Ea veritatis quae atque dignissimos fugit.
+                </p>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row d-block d-sm-none">
     <div class="col-12 payment-methods">
         <i class="fa fa-cc-stripe" aria-hidden="true"></i>
         <i class="fa fa-cc-paypal" aria-hidden="true"></i>
