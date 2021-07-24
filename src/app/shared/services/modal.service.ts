@@ -18,7 +18,7 @@ export class ModalService {
   }
 
   openQuickView(){
-    return this.openDialog(QuickViewComponent)
+    return this.openDialog(QuickViewComponent, {maxHeight:'596px'})
   }
 
   closeAll(){
