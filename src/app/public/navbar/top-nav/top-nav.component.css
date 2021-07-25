@@ -1,0 +1,34 @@
+.topnav {
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding: 10px 7.5%;
+    color:rgb(56, 56, 56);
+    font-size: 14px;
+}
+.topnav .welcome-alert {
+    padding:4px;
+    padding-right: 7px;
+}
+.topnav .company-phone{
+    padding:4px;
+    border-left: 2px solid rgb(218, 218, 218);
+}
+
+@media all and (max-width:720px) {
+    .topnav .company-phone,.topnav .company-phone i,.topnav .dropbtn,.topnav .left-border{
+        display: none;
+    }
+}
+
+  
+.topnav .user-button {
+    border: none;
+    margin-top: -23px;
+    background-color: white;
+    color:rgb(110, 110, 110);
+}
+
+
+.topnav .user-button i {
+    margin-top: -18px;
+    margin-right:4px;
+}

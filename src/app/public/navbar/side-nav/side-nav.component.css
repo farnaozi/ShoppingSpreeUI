@@ -1,0 +1,43 @@
+
+
+.nav .side-navbar .nav-item {
+    list-style-type: none;
+    font-size: 20px;
+}
+.nav .side-navbar .dropdown-item:hover {
+    background-color:white;
+}
+
+.nav .side-navbar .nav-item {
+    margin-left: -40px;
+    margin-top: -10px;
+}
+
+.nav .side-navbar .nav-item a {
+    color: #111111;
+}
+.offcanvas-body .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.offcanvas-header {
+    background-color: #f4f4f4;
+}
+
+#offcanvasRightLabel {
+    margin-top: 12px;
+}
+
+.position-absolute {
+    margin:20px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    transition: 0.4s;
+    border:none;
+    background-color: white;
+}
+.position-absolute:hover {
+    text-shadow: 2px 2px 4px rgb(126, 126, 126);
+}

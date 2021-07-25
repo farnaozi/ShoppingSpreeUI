@@ -15,19 +15,43 @@
 {
     vertical-align: middle;
 }
+
+.show-on-small-screen {
+  margin-bottom: -1px;
+}
   
   .cart-product-desc p{
       margin-bottom: 0;
+  }
+  table {
+    overflow-x: hidden !important;
   }
 
   .thead tr th {
       font-family:'ABeeZee', sans-serif!important;
       font-weight: normal;
   }
+  table p,b,span{
+    font-size: 14px;
+  }
+
+  .show-on-small-screen {
+    display: none;
+  }
 
   @media screen and (max-width:768px){
-    .scrollme {
-        min-width: 768px;
-        overflow-x: auto;
-      }
+    .hidden-els {
+      display: none;
+    }
+    .show-on-small-screen {
+      display: block;
+    }
+    table p,b,span{
+      font-size: 13px;
+    }
+    .product-image{
+      width:90px;
+      height:90px
+    }
   }
+

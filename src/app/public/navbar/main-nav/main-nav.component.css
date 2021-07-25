@@ -1,0 +1,114 @@
+.navbar .btn { 
+    display: none;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+@media all and (max-width: 992px) {
+    #main_nav .nav-item {display: none;}
+    .navbar .btn { display: block;}
+}	
+
+
+
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+
+.navbar .dropdown-item:hover {
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 5%;
+    font-size: 18px;
+    
+}
+
+.navbar .navbar-nav a{
+    color:rgb(0, 0, 0);
+    border-bottom: none;
+}
+.navbar .navbar-brand{
+    color:rgb(0, 0, 0);
+}
+
+.navbar .navbar-carts i{
+    padding: 0px 10px;
+}
+
+
+  .shopping-cart-dropbtn {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .shopping-cart-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white !important;
+    color:#4F4F4F;
+    min-width: 270px;
+    font-size:18px !important;
+    right: 0;
+    margin-right:-60px !important;
+    z-index: 999999999;
+  }
+  .shopping-cart-dropdown-content a {
+      text-decoration: none;
+  }
+
+ .view-cart a {
+    color:rgb(233, 0, 0) !important;
+    text-decoration: none;
+    float: right;
+    margin-bottom: -12px;
+    padding: 4px 0px;
+  }
+  .shopping-cart-dropdown-content a:hover {
+    color:#000000 !important;
+}
+
+
+  .total-price {
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding:10px 0px;
+  }
+  
+  .shopping-cart-dropbtn:hover .shopping-cart-dropdown-content{display: block;}
+  
+  .shopping-btn-img {
+    width:90px;
+    height:90px;
+    background:cover;
+    padding:4px;
+    margin-left:-8px;
+  }
+
+  .about-item-cart {
+      border-bottom: 1px solid rgb(230, 230, 230);
+      margin:0px 1px;
+  }
+
+  .notification {
+    color: white;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  
+  .notification .badge {
+    position: absolute;
+    font-family: inherit !important;
+    top: -9px;
+    left: 17px;
+    padding: 4px 7px;
+    max-width: 34px;
+    border-radius: 50%;
+    background-color: #ed0000;
+    color: white;
+  }
+
+
+.sticky-top{
+    z-index: 800!important;
+}
