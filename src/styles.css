@@ -163,3 +163,76 @@ body{
 table thead {
     background-color: #f9f9f9;
 }
+
+.topnav .company-phone i,.offcanvas-body .company-phone i{
+    color: rgb(255, 0, 0);
+    padding:4px;
+}
+.topnav .company-phone a,.offcanvas-body .company-phone a{
+    text-decoration: none;
+    color:rgb(77, 77, 77);
+}
+
+
+.topnav .arrow,.offcanvas-body .arrow {
+    border: solid rgb(77, 77, 77);;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 4px;
+    margin-bottom: 2px;
+}
+
+.topnav .dropbtn,.offcanvas-body .dropbtn {
+    color:rgb(77, 77, 77);;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .topnav  .dropdown,.offcanvas-body .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: -22px !important;
+  }
+  
+  .topnav .dropdown-content,.offcanvas-body .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1500 !important;
+  }
+  
+  .topnav  .dropdown-content a,.offcanvas-body .dropdown-content a {
+    color: black;
+    padding: 5px 9px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .topnav  .dropdown-content a:hover,.offcanvas-body .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .topnav .dropdown:hover .dropdown-content,.offcanvas-body .dropdown:hover .dropdown-content{
+    display: block !important;
+  }
+
+  .topnav .user-button:hover,.topnav .user-button i:hover,.topnav .company-phone a:hover,.offcanvas-body .company-phone a:hover
+,.topnav .dropbtn:hover,.offcanvas-body .dropbtn:hover
+{
+    color: #111 !important;;
+}
+
+.nav .side-navbar .nav-item a:hover,.navbar .navbar-nav a:hover,.navbar .btn:hover {
+    color:rgb(236, 0, 0) !important;
+}
+.dropdown-menu {
+    border:none;
+}
+
+.shopping-cart-dropdown-content,.navbar,.dropdown-menu {
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.2);
+}
