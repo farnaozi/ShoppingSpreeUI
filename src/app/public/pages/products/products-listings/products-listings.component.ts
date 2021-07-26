@@ -13,11 +13,11 @@ import { ProductService } from 'src/app/shared/services/product.service';
 })
 export class ProductsListingsComponent implements OnInit {
   products: Product[] = [];
-  constructor(private modalService:ModalService, private productService: ProductService) { 
+  constructor(private modalService:ModalService, private productService: ProductService) {
   }
 
-  openQuickView(){
-    this.modalService.openQuickView();
+  openQuickView(id:number){
+    this.modalService.openQuickView(id);
   }
 
   ngOnInit(): void {

@@ -1,0 +1,9 @@
+.black-button{
+    background-color: black;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.black-button:hover{
+    opacity: 0.9;
+}

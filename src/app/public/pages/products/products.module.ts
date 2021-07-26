@@ -11,8 +11,11 @@ import { PriceComponent } from './filters/other-filters/price/price.component';
 import { ReviewsComponent } from './filters/other-filters/reviews/reviews.component';
 import { SizeComponent } from './filters/other-filters/size/size.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes: Routes = [
+  { path: '', component: ProductsComponent}
+];
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
   imports: [
     CommonModule,
     MaterialModule,
-    NgxSliderModule
+    NgxSliderModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     ProductsComponent

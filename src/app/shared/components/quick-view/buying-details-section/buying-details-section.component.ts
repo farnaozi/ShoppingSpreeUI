@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-buying-details-section',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buying-details-section.component.css']
 })
 export class BuyingDetailsSectionComponent implements OnInit {
+  @Input() product: Product | undefined;
 
   constructor() { }
 

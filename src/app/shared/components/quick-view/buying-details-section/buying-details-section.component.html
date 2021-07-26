@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-6 col-12">
-        <p class="primary-title">Piqué Biker Jacket</p>
+        <p class="primary-title">{{product?.name}}</p>
     </div>
     <div class="col-6 payment-methods text-end d-none d-sm-block">
         <i class="fa fa-cc-stripe" aria-hidden="true"></i>
@@ -13,12 +13,12 @@
 <hr class="hr">
 <div class="row">
     <div class="col-6">
-        <p class="primary-title">$15.00</p>
+        <p class="primary-title">${{product?.price | number: '1.2-2'}}</p>
     </div>
     <div class="col-6 align-middle">
         <div class="float-end product-stars">
-            <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
-            <span style="color: #9f9f9f;" class="secondary-title"> (4 Reviews)</span>
+            <i *ngFor="let star of product?.reviews" class="fa fa-star"></i>
+            <span style="color: #9f9f9f;" class="secondary-title"> ({{product?.reviews?.length}} Reviews)</span>
         </div>
     </div>
 </div>
@@ -26,7 +26,7 @@
 <div class="row pb-3 pt-1">
     <div class="col-12">
         <span class="secondary-title"><strong>Size: </strong></span>
-        <span [class.product-size-active]="i==1" *ngFor="let size of ['XXL','XL','L','S']; let i=index;"
+        <span [class.product-size-active]="i==1" *ngFor="let size of product?.sizes; let i=index;"
             class="product-size-box">{{size}}</span>
     </div>
 </div>
@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-12 text-nowrap my-auto">
                 <span class="secondary-title"><strong>Color:</strong></span>
-                <span *ngFor="let color of ['black', '#20315F', '#F1AF4D', '#ED1C24','white'];" class="color py-auto"
+                <span *ngFor="let color of product?.colors" class="color py-auto"
                     [style.background-color]="color"></span>
             </div>
 

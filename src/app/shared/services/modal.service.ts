@@ -17,8 +17,8 @@ export class ModalService {
     return dialogRef;
   }
 
-  openQuickView(){
-    return this.openDialog(QuickViewComponent, {maxHeight:'596px'})
+  openQuickView(id:number){
+    return this.openDialog(QuickViewComponent, {maxHeight:'596px',data:{productId:id}})
   }
 
   closeAll(){
