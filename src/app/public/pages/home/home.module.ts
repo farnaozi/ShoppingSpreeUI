@@ -9,7 +9,11 @@ import { TopBrandsComponent } from './top-brands/top-brands.component';
 import { SheredComponentsModule } from 'src/app/shared/modules/shered-components.module';
 import { HomeComponent } from './home.component';
 import { CompanyBenefitsComponent } from './company-benefits/company-benefits.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: '', component: HomeComponent}
+];
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { CompanyBenefitsComponent } from './company-benefits/company-benefits.co
   ],
   imports: [
     CommonModule,
-    SheredComponentsModule
+    SheredComponentsModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     HomeComponent

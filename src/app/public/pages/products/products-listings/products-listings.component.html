@@ -1,6 +1,6 @@
 <div class="row">
     <div *ngFor="let product of products; let i = index" class="col-xl-4 col-lg-6 product-card">
-        <div class="product-image">
+        <div [routerLink]="['/product', product.id]" class="product-image">
             <span *ngIf="product.salePrice != undefined" class="sale-sign">
                 {{(product.salePrice/product.price)*100 | number: '1.0-0'}}% OFF
             </span>
@@ -10,12 +10,12 @@
                 <div class="float-start">
                     <div class="product-name">{{product.name}}</div>
                     <div class="product-stars">
-                        <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
+                        <i *ngFor="let star of  [1,2,3,4,5]" class="fa fa-star"></i>
                     </div>
-                    <div *ngIf="product.salePrice == undefined" class="current-product-price">${{product.price}}.00</div>
+                    <div *ngIf="product.salePrice == undefined" class="current-product-price">${{product.price | number: '1.2-2'}}</div>
                     <div *ngIf="product.salePrice != undefined" class="sale">
-                        <span class="sale-price current-product-price">${{product.salePrice}}.00 </span>
-                        <span class="normal-price">${{product.price}}.00</span>
+                        <span class="sale-price current-product-price">${{product.salePrice | number: '1.2-2'}} </span>
+                        <span class="normal-price">${{product.price | number: '1.2-2'}}</span>
                     </div>
                 </div>
                 <div class="float-end">
@@ -24,7 +24,7 @@
 
                   </div>
                   <div class="buttons">
-                    <i (click)="openQuickView()" class="fa fa-eye" aria-hidden="true"></i>
+                    <i (click)="openQuickView(product.id)" class="fa fa-eye" aria-hidden="true"></i>
                     <i class="fa fa-heart-o" aria-hidden="true"></i>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                   </div>

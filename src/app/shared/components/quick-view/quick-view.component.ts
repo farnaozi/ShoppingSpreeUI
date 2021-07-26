@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-quick-view',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quick-view.component.css']
 })
 export class QuickViewComponent implements OnInit {
-
+  @Input() product: Product | undefined;
   constructor() { }
 
   ngOnInit(): void {

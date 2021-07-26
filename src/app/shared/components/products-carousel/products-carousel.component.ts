@@ -17,8 +17,8 @@ export class ProductsCarouselComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openQuickView(){
-    this.modalService.openQuickView();
+  openQuickView(id:number){
+    this.modalService.openQuickView(id);
   }
 
   customOptions: OwlOptions = {

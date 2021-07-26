@@ -5,6 +5,12 @@ import { AboutOurCompanyComponent } from './about-our-company/about-our-company.
 import { OurPurposeComponent } from './our-purpose/our-purpose.component';
 import { MeetOurTeamComponent } from './meet-our-team/meet-our-team.component';
 import { OurBrandsAndCompaniesComponent } from './our-brands-and-companies/our-brands-and-companies.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: AboutUsComponent},
+  { path: '**', redirectTo:''}
+];
 
 @NgModule({
   declarations: [
@@ -16,6 +22,7 @@ import { OurBrandsAndCompaniesComponent } from './our-brands-and-companies/our-b
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     AboutUsComponent

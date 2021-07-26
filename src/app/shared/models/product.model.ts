@@ -3,8 +3,12 @@ export interface Product{
     name:string;
     price:number;
     salePrice?:number;
-    rating:number;
-    reviewCount:number;
+    reviews:{
+      reviewer:string;
+      rating:number;
+      review:string;
+    }[]
     sizes:string[];
     colors:string[];
+    description:string;
   }
