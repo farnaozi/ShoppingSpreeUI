@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-quick-view',
@@ -8,7 +9,9 @@ import { Product } from '../../models/product.model';
 })
 export class QuickViewComponent implements OnInit {
   @Input() product: Product | undefined;
-  constructor() { }
+  constructor(  @Inject(MAT_DIALOG_DATA) data:Product | undefined) {
+    this.product = data;
+   }
 
   ngOnInit(): void {
   }

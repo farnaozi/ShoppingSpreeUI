@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Product } from '../../models/product.model';
 import { ModalService } from '../../services/modal.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-products-carousel',
@@ -9,17 +11,33 @@ import { ModalService } from '../../services/modal.service';
 })
 export class ProductsCarouselComponent implements OnInit {
   @Input() title:string = "";
-  @Input() data:number[] = [1,2,3,4,5,6];
+  @Input() data:Product[] = [];
   @Input() centerTitle:boolean = false;
   @Input() width:string = "";
-  constructor(private modalService:ModalService) { }
+  constructor(private modalService:ModalService, private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(data=>{
+      this.data = [...data.filter(p=> p.salePrice != undefined)]
+    })
   }
 
   openQuickView(id:number){
-    this.modalService.openQuickView(id);
+    this.productService.getProductById(id).subscribe(data=>{
+      this.modalService.openQuickView(data);
+    })
   }
+
+  counter(reviews:any[]) {
+    if(reviews.length != 0){
+      let sum = 0;
+      reviews!.forEach(rev => sum+=rev.rating );
+      return new Array(Math.ceil(sum/reviews.length!));
+    }
+
+    return new Array(0);
+  }
+
 
   customOptions: OwlOptions = {
     margin: 30,

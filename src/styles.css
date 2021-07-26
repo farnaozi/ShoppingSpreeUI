@@ -244,3 +244,12 @@ table thead {
 input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched {
     border:1px solid rgb(255, 0, 0);
 }
+
+.mat-tab-label {
+    /* min-width: 25px !important; */
+    /* padding: 5px!important; */
+    color: rgb(0, 0, 0)!important;
+    opacity: 1 !important;
+    font-weight: 400!important;
+    font-size: 18px!important;
+  }

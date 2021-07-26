@@ -7,7 +7,7 @@ export interface Product{
       reviewer:string;
       rating:number;
       review:string;
-    }[]
+    }[];
     sizes:string[];
     colors:string[];
     description:string;

@@ -1,5 +1,12 @@
 <div class="container">
-    <app-quick-view [product]="product" ></app-quick-view>
+    <div class="row">
+        <div class="col-xl-6">
+            <app-images-section></app-images-section>
+        </div>
+        <div class="col-xl-6">
+            <app-buying-details-section [product]="product" ></app-buying-details-section>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12">
             <app-description-review-section [productDescReview]="productDescReview" ></app-description-review-section>

@@ -11,30 +11,31 @@
             </div>
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide *ngFor="let product of data; let i = index" class="product-card">
-                    <div [routerLink]="['/product', product]" class="product-image">
-                        <span style="left: 0;" *ngIf="i%2!=0" class="sale-sign">20% OFF</span>
+                    <div [routerLink]="['/product', product.id]" class="product-image">
+                        <span style="left: 0;" *ngIf="product.salePrice != undefined" class="sale-sign">
+                            {{(product.salePrice/product.price)*100 | number: '1.0-0'}}% OFF
+                        </span>
                     </div>
                     <div class="row product-desc">
                         <div class="col-12">
                             <div class="float-start">
-                                <div class="product-name">Piqué Biker Jacket</div>
+                                <div class="product-name">{{product.name}}</div>
                                 <div class="product-stars">
-                                    <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
+                                    <i *ngFor="let star of counter(product.reviews)" class="fa fa-star"></i>
                                 </div>
-                                <div *ngIf="i%2==0" class="current-product-price">$15.00</div>
-                                <div *ngIf="i%2!=0" class="sale">
-                                    <span class="sale-price current-product-price">$10.00 </span>
-                                    <span class="normal-price">$15.00</span>
+                                <div *ngIf="product?.salePrice==0" class="current-product-price">${{product.price | number: '1.2-2'}}</div>
+                                <div *ngIf="product?.salePrice!=0" class="sale">
+                                    <span class="sale-price current-product-price">${{product?.salePrice | number: '1.2-2'}} </span>
+                                    <span class="normal-price">${{product.price | number: '1.2-2'}}</span>
                                 </div>
                             </div>
                             <div class="float-end">
                               <div class="colors">
-                                  <div [style.background-color]="'#5E64D1'" class="color"></div>
-                                  <div [style.background-color]="'#404A47'" class="color"></div>
-                                  <div [style.background-color]="'#D5A667'" class="color"></div>
+                                  <div *ngFor="let color of product.colors" [style.background-color]="color" class="color"></div>
+                          
                               </div>
                               <div class="buttons" style="right: 0;">
-                                <i (click)="openQuickView(1)" class="fa fa-eye" aria-hidden="true"></i>
+                                <i (click)="openQuickView(product.id)" class="fa fa-eye" aria-hidden="true"></i>
                                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               </div>

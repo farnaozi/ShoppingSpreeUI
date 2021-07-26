@@ -17,7 +17,9 @@ export class ProductsListingsComponent implements OnInit {
   }
 
   openQuickView(id:number){
-    this.modalService.openQuickView(id);
+    this.productService.getProductById(id).subscribe(data=>{
+      this.modalService.openQuickView(data);
+    });
   }
 
   ngOnInit(): void {
