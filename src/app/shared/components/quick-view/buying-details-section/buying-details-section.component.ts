@@ -13,11 +13,15 @@ export class BuyingDetailsSectionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    if(this.product?.reviews.length != 0){
-      let sum = 0;
-      this.product?.reviews!.forEach(rev => sum+=rev.rating )
-      this.reviewStarCount.length = Math.ceil(sum/this.product?.reviews.length!); 
-    }
   }
-  
+
+  counter(reviews:any[] | undefined) {
+    if(reviews?.length != 0){
+      let sum = 0;
+      reviews!.forEach(rev => sum+=rev.rating );
+      return new Array(Math.ceil(sum/reviews?.length!));
+    }
+
+    return new Array(0);
+  }
 }

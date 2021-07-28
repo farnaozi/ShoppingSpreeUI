@@ -15,7 +15,7 @@ body{
 .product-image{
     width: 100%;
     height: 260px;
-    background: url(/assets/images/handbag.jpg) center no-repeat ;
+    background: url(/assets/images/product.jpg) center no-repeat ;
     background-size:cover;
     cursor: pointer;
     transition: opacity 0.3s;
@@ -253,3 +253,9 @@ input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched {
     font-weight: 400!important;
     font-size: 18px!important;
   }
+
+  @media only screen and (max-width: 576px) {
+  .login-register{
+      width: 100%!important;
+  }
+}
