@@ -13,11 +13,16 @@
 <hr class="hr">
 <div class="row">
     <div class="col-6">
-        <p class="primary-title">${{product?.price | number: '1.2-2'}}</p>
+        <p *ngIf="product?.salePrice == undefined" class="current-product-price">${{product?.price | number: '1.2-2'}}</p>
+        <p *ngIf="product?.salePrice != undefined" class="sale">
+            <span class="sale-price current-product-price">${{product?.salePrice | number: '1.2-2'}} </span>
+            <span class="normal-price">${{product?.price | number: '1.2-2'}}</span>
+        </p>
+        <!-- <p class="primary-title">${{product?.price | number: '1.2-2'}}</p> -->
     </div>
     <div class="col-6 align-middle">
         <div class="float-end product-stars">
-            <i *ngFor="let star of product?.reviews" class="fa fa-star"></i>
+            <i *ngFor="let star of counter(product?.reviews)" class="fa fa-star"></i>
             <span style="color: #9f9f9f;" class="secondary-title"> ({{product?.reviews?.length}} Reviews)</span>
         </div>
     </div>

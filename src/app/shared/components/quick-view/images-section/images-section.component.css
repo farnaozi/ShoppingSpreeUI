@@ -3,7 +3,7 @@
 }
 
 .product-image{
-    background: url(/assets/images/handbag.jpg) center no-repeat;
+    background: url(/assets/images/product.jpg) top no-repeat;
     height: 100%!important;
     cursor:default!important;
     opacity: 1!important;
@@ -15,13 +15,17 @@
     margin-bottom: 16px;
 }
 
-.side-image-box img{
+.side-image{
+    background: url(/assets/images/product.jpg) top no-repeat;
     height: 93px;
+    width: 93px;
     cursor: pointer;
+    background-size:cover;
     transition: opacity 0.3s;
+    object-fit: contain;
 }
 
-.side-image-box img:hover{
+.side-image:hover{
     opacity: 0.8;
 }
 
@@ -49,15 +53,15 @@
 
   @media only screen and (max-width: 768px) {
     .side-image-box{
-        white-space: nowrap;
-        display: inline;
+        display: inline-block;
+    }
+    .side-image{
         margin-right:16px;
-        margin-bottom: 0px!important;
     }
     .images-scroll{
         margin: 0 auto;
+        margin-bottom: 10px;
         overflow-x: scroll;
-        height: 100px;
     }
     ::-webkit-scrollbar {
         height: 4px;

@@ -8,10 +8,20 @@ import { Product } from 'src/app/shared/models/product.model';
 })
 export class BuyingDetailsSectionComponent implements OnInit {
   @Input() product: Product | undefined;
-
-  constructor() { }
+  reviewStarCount:number[] = []
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
 
+  counter(reviews:any[] | undefined) {
+    if(reviews?.length != 0){
+      let sum = 0;
+      reviews!.forEach(rev => sum+=rev.rating );
+      return new Array(Math.ceil(sum/reviews?.length!));
+    }
+
+    return new Array(0);
+  }
 }

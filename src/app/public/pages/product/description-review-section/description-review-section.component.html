@@ -22,7 +22,7 @@
             nihil?
         </p>
     </mat-tab>
-    <mat-tab label="Reviews (2)">
+    <mat-tab label="Reviews ({{productDescReview.reviews?.length}})">
         <form [formGroup]="reviewForm">
             <div class="row pt-3">
                 <div class="col-4">
@@ -34,14 +34,14 @@
                 </div>
                 <div class="col-4 px-3">
                     <input placeholder="Last Name" type="text" class="form-control" id="lastName" name="lastName"
-                    formControlName="lastName">
+                        formControlName="lastName">
                     <span *ngIf="isFieldValid('lastName')" class="help-block">
                         Please enter a valid last name
                     </span>
                 </div>
                 <div class="col-4">
                     <input placeholder="Email" type="email" class="form-control" id="email" name="email"
-                    formControlName="email">
+                        formControlName="email">
                     <span *ngIf="isFieldValid('email')" class="help-block">
                         Please enter a valid last email
                     </span>
@@ -50,7 +50,7 @@
             <div class="row pt-3">
                 <div class="col-12">
                     <textarea placeholder="Your Review" id="review" class="form-control" name="review"
-                    formControlName="review" rows="5"></textarea>
+                        formControlName="review" rows="5"></textarea>
                     <span *ngIf="isFieldValid('review')" class="help-block">
                         Please enter a valid last review
                     </span>
@@ -68,19 +68,22 @@
                 </div>
             </div>
         </form>
-        <hr class="hr my-5">
-        <p class="primary-title mb-3">Reviews</p>
-        <div class="review-box">
-            <div class="row" *ngFor="let review of productDescReview.reviews">
-                <div class="col-2">
-                    <p class="mb-0"><strong>{{productDescReview.reviewer}}</strong></p>
-                    <i *ngFor="let star of [1,2,3,4]" class="fa fa-star review-star-color" aria-hidden="true"></i>
+        <ng-template [ngIf]="productDescReview.reviews?.length != 0">
+            <hr class="hr my-5">
+            <p class="primary-title mb-3">Reviews</p>
+            <div class="review-box">
+                <div class="row" *ngFor="let review of productDescReview.reviews">
+                    <div class="col-2">
+                        <p class="mb-0"><strong>{{review.reviewer}}</strong></p>
+                        <i *ngFor="let star of counter(review.rating)" class="fa fa-star review-star-color"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <p>{{review.review}}</p>
+                    </div>
                 </div>
-                <div class="col-10">
-                    <p>{{productDescReview.review}}</p>
-                </div>
+                <p class="secondary-title load-more-review"><strong>Load More</strong></p>
             </div>
-            <p class="secondary-title load-more-review"><strong>Load More</strong></p>
-        </div>
+        </ng-template>
     </mat-tab>
 </mat-tab-group>

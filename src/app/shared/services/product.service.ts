@@ -14,7 +14,11 @@ export class ProductService {
       name: "Piqué Biker Jacket",
       price: 15,
       salePrice: 5,
-      reviews: [],
+      reviews: [{
+        reviewer:'test',
+        review:'test',
+        rating:3.5
+      }],
       sizes: ['XXL', 'XL', 'L', 'S'],
       colors: ['Black'],
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil?'
@@ -24,6 +28,7 @@ export class ProductService {
       name: "Piqué Biker Jacket",
       price: 15,
       reviews: [],
+      salePrice: 5,
       sizes: ['XXL', 'XL', 'L', 'S'],
       colors: ['Black'],
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est quo! Repudiandae ab, qui vero nihil molestias dignissimos dolorem ex excepturi culpa modi illum doloribus iure optio. Sunt, eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, cumque dolor! Repudiandae facilis eveniet a quibusdam placeat fugiat, eligendi saepe explicabo et, quidem officiis quis adipisci vel accusantium, numquam nihil?'

@@ -13,8 +13,7 @@ export class DescriptionReviewSectionComponent implements OnInit {
     'email': new FormControl('', [Validators.required, Validators.email]),
     'review': new FormControl('', Validators.required)
   });
-  @Input() productDescReview:any | undefined;
-  // description
+  @Input() productDescReview: any | undefined;
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +21,10 @@ export class DescriptionReviewSectionComponent implements OnInit {
 
   isFieldValid(formControl: string) {
     return !this.reviewForm.get(formControl)?.valid && this.reviewForm.get(formControl)?.touched;
+  }
+
+  counter(i: number) {
+    return new Array(Math.ceil(i));
   }
 
 }

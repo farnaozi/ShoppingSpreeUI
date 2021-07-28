@@ -2,16 +2,19 @@
     <div class="col-md-3">
         <div class="images-scroll">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 text-nowrap">
                     <div *ngFor="let image of [1,2,3,4,5]" class="side-image-box">
-                        <img [class.border]="image == 1" src="/assets/images/handbag.jpg" alt="product">
+                        <div [class.border]="image == 1" class="side-image">
+
+                        </div>
+                        <!-- <img [class.border]="image == 1" src="/assets/images/handbag.jpg" alt="product"> -->
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="col-md-9 image-section-box">
+    <div class="col-md-9 image-section-box pb-2">
         <div class="product-image"></div>
     </div>
 </div>
