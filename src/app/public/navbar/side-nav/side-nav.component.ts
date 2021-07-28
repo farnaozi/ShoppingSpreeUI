@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarRoutersService } from '../navbar-routers.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-
-  constructor() { }
+  navbarRoutersData:any;
+  constructor(private navbarRouters: NavbarRoutersService) { }
 
   ngOnInit(): void {
+    this.navbarRoutersData = this.navbarRouters.getRoutersData();
   }
-
 }

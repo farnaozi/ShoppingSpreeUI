@@ -20,7 +20,6 @@ import { NavbarModule } from './navbar/navbar.module';
   imports: [
     CommonModule,
     SheredComponentsModule,
-    MyWishlistModule,
     PublicRoutingModule,
     NavbarModule
   ],
