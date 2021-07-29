@@ -76,7 +76,7 @@
                     <div class="col-2">
                         <p class="mb-0"><strong>{{review.reviewer}}</strong></p>
                         <i *ngFor="let star of counter(review.rating)" class="fa fa-star review-star-color"
-                            aria-hidden="true"></i>
+                            aria-hidden="true"></i> {{review.rating}}
                     </div>
                     <div class="col-10">
                         <p>{{review.review}}</p>

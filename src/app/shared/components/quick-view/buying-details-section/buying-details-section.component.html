@@ -13,7 +13,8 @@
 <hr class="hr">
 <div class="row">
     <div class="col-6">
-        <p *ngIf="product?.salePrice == undefined" class="current-product-price">${{product?.price | number: '1.2-2'}}</p>
+        <p *ngIf="product?.salePrice == undefined" class="current-product-price">${{product?.price | number: '1.2-2'}}
+        </p>
         <p *ngIf="product?.salePrice != undefined" class="sale">
             <span class="sale-price current-product-price">${{product?.salePrice | number: '1.2-2'}} </span>
             <span class="normal-price">${{product?.price | number: '1.2-2'}}</span>
@@ -31,8 +32,8 @@
 <div class="row pb-3 pt-1">
     <div class="col-12">
         <span class="secondary-title"><strong>Size: </strong></span>
-        <span [class.product-size-active]="i==1" *ngFor="let size of product?.sizes; let i=index;"
-            class="product-size-box">{{size}}</span>
+        <span (click)="selectSize(size)" [class.product-size-active]="selectedSize==size"
+            *ngFor="let size of product?.sizes; let i=index;" class="product-size-box">{{size}}</span>
     </div>
 </div>
 <div class="row pb-4">
@@ -41,7 +42,7 @@
             <div class="col-12 text-nowrap my-auto">
                 <span class="secondary-title"><strong>Color:</strong></span>
                 <span *ngFor="let color of product?.colors" class="color py-auto"
-                    [style.background-color]="color"></span>
+                   (click)="selectColor(color)" [class.selected-color]="selectedColor==color" [style.background-color]="color"></span>
             </div>
 
         </div>
@@ -57,8 +58,8 @@
 <div class="row pb-1">
     <div class="col-12">
         <div style="max-width: 450px;" class="input-group">
-            <input type="number" class="form-control form-control-lg d-inline me-2 mt-2">
-            <button class="btn add-to-cart d-inline me-2 btn-lg mt-2">ADD TO CART</button>
+            <input [(ngModel)]="quantity" type="number" class="form-control form-control-lg d-inline me-2 mt-2">
+            <button (click)="addToCart()" class="btn add-to-cart d-inline me-2 btn-lg mt-2">ADD TO CART</button>
             <button class="btn buy-now d-inline btn-lg mt-2">BUY NOW</button>
         </div>
 
@@ -70,7 +71,8 @@
         <div class="secondary-background">
             <div class="py-3 px-3">
                 <p><strong>Shipping methods</strong></p>
-                <p><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit, amet<br>
+                <p><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit,
+                    amet<br>
                     <i class="fa fa-clock-o" aria-hidden="true"></i> online service 24/7 - Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit. Ea veritatis quae atque dignissimos fugit.
                 </p>
