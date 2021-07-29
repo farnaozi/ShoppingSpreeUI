@@ -10,7 +10,7 @@ export class NavbarRoutersService {
         {
             home: "",
             products: "products",
-            productId: "product/:1",
+            productId: "product/1",
             contact: "contact",
             aboutUs: "about-us",
             myWishlist: "my-wishlist",
