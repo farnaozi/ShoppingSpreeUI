@@ -7,9 +7,11 @@ import { SheredComponentsModule } from '../shared/modules/shered-components.modu
 import { MyWishlistModule } from './pages/my-wishlist/my-wishlist.module';
 import { PublicRoutingModule } from './public-routing.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
+    BreadcrumbComponent,
     FooterComponent,
     PublicComponent
     ],
