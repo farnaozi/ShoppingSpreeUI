@@ -1,12 +1,13 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="pageName != ''">
     <div class="row breadcrumb">
         <div class="col-12 my-auto">
-            <div class="container">
+            <div class="container text-capitalize">
               <span class="page-name">{{pageName}}</span>
-              <span class="page-breadcrumb text-capitalize">
+              <span class="page-breadcrumb">
                   {{prevUrl}} 
                   <span *ngIf="currUrl.length != 0">></span> 
-                  {{currUrl}}</span>
+                  {{currUrl}}
+                </span>
             </div>
         </div>
     </div>

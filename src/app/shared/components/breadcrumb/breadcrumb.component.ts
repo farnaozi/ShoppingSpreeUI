@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-breadcrumb',
@@ -7,22 +7,21 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./breadcrumb.component.css']
 })
 export class BreadcrumbComponent implements OnInit {
-  @Input() pageName: string = "Products";
-  prevUrl: string = "";
+  @Input() pageName: string = "";
+  prevUrl: string = "Home";
   currUrl: string = "";
 
-  constructor(router: Router) { 
+  constructor(router: Router,private activatedRoute: ActivatedRoute) { 
     router.events
     .pipe(filter(event => event instanceof NavigationEnd))
     .subscribe((event: any) => {
-      if(this.prevUrl.length == 0)
-        this.prevUrl = event.url.slice(1,event.url.length);
-      else if(this.prevUrl.length != 0 
-        && this.currUrl.length == 0)
-          this.currUrl = event.url.slice(1,event.url.length);
+      console.log(event.url);
+      if(event.url.length > 0){
+        this.currUrl = event.url.split("/",2)[1];
+        this.pageName = event.url.split("/",2)[1];
+      }
       else{
-        this.prevUrl = event.url.slice(1,event.url.length);
-        this.currUrl = ""
+        this.currUrl = "";
       }
     });
   }
