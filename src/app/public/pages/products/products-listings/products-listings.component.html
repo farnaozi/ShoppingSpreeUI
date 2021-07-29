@@ -9,13 +9,16 @@
             <div class="col-12">
                 <div class="float-start">
                     <div class="product-name">{{product.name}}</div>
-                    <div class="product-stars">
-                        <i *ngFor="let star of  [1,2,3,4,5]" class="fa fa-star"></i>
-                    </div>
                     <div *ngIf="product.salePrice == undefined" class="current-product-price">${{product.price | number: '1.2-2'}}</div>
                     <div *ngIf="product.salePrice != undefined" class="sale">
                         <span class="sale-price current-product-price">${{product.salePrice | number: '1.2-2'}} </span>
                         <span class="normal-price">${{product.price | number: '1.2-2'}}</span>
+                    </div>
+                    <div *ngIf="product?.reviews?.length != 0" class="product-stars">
+                        <i *ngFor="let star of counter(product.reviews)" class="fa fa-star"></i> {{product?.reviews?.length}}
+                    </div>
+                    <div *ngIf="product?.reviews?.length == 0" class="product-stars">
+                        <i style="color:initial" *ngFor="let star of [1,2,3,4,5]" class="fa fa-star-o"></i> {{product?.reviews?.length}}
                     </div>
                 </div>
                 <div class="float-end">
@@ -26,7 +29,7 @@
                   <div class="buttons">
                     <i (click)="openQuickView(product.id)" class="fa fa-eye" aria-hidden="true"></i>
                     <i class="fa fa-heart-o" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i (click)="addToCart(product)" class="fa fa-shopping-cart" aria-hidden="true"></i>
                   </div>
                 </div>
             </div>
