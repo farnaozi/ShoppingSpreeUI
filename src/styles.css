@@ -7,6 +7,7 @@ body{
     overflow-x: hidden !important;
 }
 
+/* product card start */
 
 .product-card{
     position: relative;
@@ -175,7 +176,7 @@ table thead {
 
 
 .topnav .arrow,.offcanvas-body .arrow {
-    border: solid rgb(77, 77, 77);;
+    border: solid rgb(0, 0, 0);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -186,7 +187,7 @@ table thead {
 }
 
 .topnav .dropbtn,.offcanvas-body .dropbtn {
-    color:rgb(77, 77, 77);;
+    color:rgb(0, 0, 0);
     border: none;
     cursor: pointer;
     background-color: white;
@@ -203,7 +204,7 @@ table thead {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 40px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.2);
     z-index: 1500 !important;
   }
   
@@ -223,7 +224,7 @@ table thead {
   .topnav .user-button:hover,.topnav .user-button i:hover,.topnav .company-phone a:hover,.offcanvas-body .company-phone a:hover
 ,.topnav .dropbtn:hover,.offcanvas-body .dropbtn:hover
 {
-    color: #111 !important;;
+    color: #383838 !important;
 }
 
 .nav .side-navbar .nav-item a:hover,.navbar .navbar-nav a:hover,.navbar .btn:hover {

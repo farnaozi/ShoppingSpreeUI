@@ -5,7 +5,6 @@ import { AccountDashboardComponent } from './account-dashboard.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { MaterialModule } from 'src/app/shared/modules/material.module';
-import { MyWishlistModule } from '../my-wishlist/my-wishlist.module';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -23,8 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     MaterialModule,
-    MyWishlistModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports: [
     AccountDashboardComponent

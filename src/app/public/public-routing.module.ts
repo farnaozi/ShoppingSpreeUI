@@ -10,7 +10,6 @@ const routes: Routes = [
     {path: 'product/:id', loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule)},
     {path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)},
     {path: 'about-us', loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)},
-    {path: 'my-wishlist', loadChildren: () => import('./pages/my-wishlist/my-wishlist.module').then(m => m.MyWishlistModule)},
     {path: 'account-dashboard', loadChildren: () => import('./pages/account-dashboard/account-dashboard.module').then(m => m.AccountDashboardModule)},
     {path: 'shopping-cart', loadChildren: () => import('./pages/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule)},
     {path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule)},

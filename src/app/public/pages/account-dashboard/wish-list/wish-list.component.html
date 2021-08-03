@@ -2,7 +2,75 @@
     <div class="row">
         <mat-tab-group color="warn" mat-align-tabs="start">
             <mat-tab label="My WishList">
-                <app-my-wishlist></app-my-wishlist>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col"></th>
+                            <th scope="col" style="padding-left:26px" class="hidden-els">Quantity</th>
+                            <th scope="col" class="hidden-els">Availability</th>
+                            <th scope="col" class="hidden-els">Total</th>
+                            <th scope="col" class="text-center show-on-small-screen">Item's Data</th>
+                            <th scope="col" class="hidden-els"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let wishList of wishListData">
+                            <td style="width: 100px;">
+                                <img src="{{wishList.imgSrc}}" class="product-image" alt="{{wishList.imgAlt}}">
+                            </td>
+                            <td>
+                                <div class="cart-product-desc">
+                                    <p>{{wishList.itemName}}</p>
+                                    <b>{{wishList.itemPrice | number : '1.2-2'}}</b>
+                                    <p>Color: <span [style.background-color]="wishList.itemColor" class="color"></span></p>
+                                    <p>Size:<strong>{{wishList.itemSize}}</strong></p>
+                                </div>
+                            </td>
+                            <td class="hidden-els">
+                                <div class="btn-group" role="group">
+                                    <button class="btn" type="button" (click)="reduceAmount()">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </button>
+                                    <button disabled class="btn">
+                                        <strong>{{itemAmount}}</strong>
+                                    </button>
+                                    <button class="btn" type="button" (click)="increaseAmount()">
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="hidden-els">
+                                <span>{{wishList.availability ? 'In Stock' : 'Out Of Stock'}}</span>
+                            </td>
+                            <td class="hidden-els">
+                                <strong>{{wishList.itemPrice * itemAmount | number : '1.2-2'}}</strong>
+                            </td>
+                            <td class="text-center show-on-small-screen">
+                                <div class="btn-group" role="group">
+                                    <button class="btn" type="button" (click)="reduceAmount()">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </button>
+                                    <button disabled class="btn">
+                                        <strong>{{itemAmount}}</strong>
+                                    </button>
+                                    <button class="btn" type="button" (click)="increaseAmount()">
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div>{{wishList.itemPrice * itemAmount | number : '1.2-2'}}</div>
+                                <span>{{wishList.availability ? 'In Stock' : 'Out Of Stock'}}<button class="btn cart-delete"><i
+                                            class="fa fa-close"></i></button></span>
+                            </td>
+                            <td class="hidden-els">
+                                <button class="btn cart-delete float-end" (click)="removeElementFromArray(wishList.id)"><i
+                                        class="fa fa-close"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <strong style="float: left;padding-top: 7px;">Total Price: $120.75</strong>
+                <button type="button" style="float: right;" class="default-button">Check Out</button>
             </mat-tab>
             <mat-tab label="Newsletters">
                 <p class="pt-3">

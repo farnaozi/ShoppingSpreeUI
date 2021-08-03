@@ -4,7 +4,7 @@
 
 .product-image{
     background: url(/assets/images/product.jpg) top no-repeat;
-    height: 100%!important;
+    height: 529px !important;
     cursor:default!important;
     opacity: 1!important;
     background-size:cover;
@@ -35,8 +35,6 @@
 
 .images-scroll{
     max-height: 548px;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -48,12 +46,14 @@
   }
    
   ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: #a1a1a1; 
+    border-radius: 7px;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .side-image-box{
         display: inline-block;
+        margin-bottom: 4px;
     }
     .side-image{
         margin-right:16px;

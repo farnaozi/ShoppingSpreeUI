@@ -69,4 +69,16 @@ p{
 .payment-methods i{
     font-size: 24px;
     margin-right: 5px;
+    margin-top: 6px;
+}
+
+@media screen and (max-width:604px) {
+    .buy-now,.form-control,.add-to-cart {
+        width:100% !important;
+        border-radius: .3rem !important;
+        margin-right: 0px !important;
+    }
+    .input-group{
+        max-width: 100% !important;
+    }
 }
