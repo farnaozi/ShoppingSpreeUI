@@ -45,7 +45,7 @@
             <i class="fa fa-times" aria-hidden="true" (click)="showSearchBarFunc()" style="font-size: 24px;"></i>
           </li>
           <li>
-            <a [routerLink]="[routers.myWishlist]" title="Go To My WishList's Page"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a [routerLink]="[routers.accountDashboard]" title="See Your WishList's Info"><i class="fa fa-heart" aria-hidden="true"></i></a>
           </li>
           <li>
             <div class="shopping-cart-dropbtn">
@@ -55,7 +55,7 @@
               <div class="container p-3 shopping-cart-dropdown-content">
                 <div class="row about-item-cart" *ngFor="let x of [0,1]">
                   <div class="col-4 p-1">
-                    <a [routerLink]="[routers.productId]"><img src="/assets/images/product-3.jpg" alt="" class="shopping-btn-img"></a>
+                    <a [routerLink]="[routers.productId]"><img src="/assets/images/product.jpg" alt="" class="shopping-btn-img"></a>
                   </div>
                   <div class="col-8 text-center pt-3">
                     <a [routerLink]="[routers.productId]"><span>New Tops</span></a><br>

@@ -10,7 +10,7 @@ export class MyWishListService {
         return of([
         {
             id: 0,
-            imgSrc: "/assets/images/product-3.jpg",
+            imgSrc: "/assets/images/product.jpg",
             imgAlt: "...",
             itemName: "Piqué Biker Jacket",
             itemPrice: 15.00,
@@ -20,7 +20,7 @@ export class MyWishListService {
         },
         {
             id: 1,
-            imgSrc: "/assets/images/product-3.jpg",
+            imgSrc: "/assets/images/product.jpg",
             imgAlt: "...",
             itemName: "Piqué Biker Jacket",
             itemPrice: 7.99,
@@ -31,7 +31,7 @@ export class MyWishListService {
         },
         {
             id: 2,
-            imgSrc: "/assets/images/product-3.jpg",
+            imgSrc: "/assets/images/product.jpg",
             imgAlt: "...",
             itemName: "Piqué Biker Jacket",
             itemPrice: 30.00,

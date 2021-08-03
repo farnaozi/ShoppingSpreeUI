@@ -41,7 +41,7 @@
     position: relative;
     display: inline-block;
   }
-  
+
   .shopping-cart-dropdown-content {
     display: none;
     position: absolute;
@@ -53,6 +53,8 @@
     margin-right:-60px !important;
     z-index: 999999999;
   }
+
+
   .shopping-cart-dropdown-content a {
       text-decoration: none;
   }
@@ -77,8 +79,8 @@
   .shopping-cart-dropbtn:hover .shopping-cart-dropdown-content{display: block;}
   
   .shopping-btn-img {
-    width:90px;
-    height:90px;
+    width:100px;
+    height:80px;
     background:cover;
     padding:4px;
     margin-left:-8px;
@@ -111,4 +113,7 @@
 
 .sticky-top{
     z-index: 800!important;
+}
+.navbar-nav li {
+    cursor: pointer;
 }

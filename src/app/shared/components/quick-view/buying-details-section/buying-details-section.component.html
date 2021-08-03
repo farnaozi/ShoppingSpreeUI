@@ -60,7 +60,7 @@
         <div style="max-width: 450px;" class="input-group">
             <input [(ngModel)]="quantity" type="number" class="form-control form-control-lg d-inline me-2 mt-2">
             <button (click)="addToCart()" class="btn add-to-cart d-inline me-2 btn-lg mt-2">ADD TO CART</button>
-            <button class="btn buy-now d-inline btn-lg mt-2">BUY NOW</button>
+            <button class="btn buy-now d-inline me-2 btn-lg mt-2">BUY NOW</button>
         </div>
 
     </div>
@@ -70,22 +70,23 @@
     <div class="col-12">
         <div class="secondary-background">
             <div class="py-3 px-3">
-                <p><strong>Shipping methods</strong></p>
-                <p><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit,
+                <p><strong>Shipping Methods</strong></p>
+                <p class="mb-2"><i class="fa fa-truck" aria-hidden="true"></i> Free Shipping - 7-14 Days Lorem ipsum dolor sit,
                     amet<br>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i> online service 24/7 - Lorem ipsum dolor sit, amet
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> Online Service 24/7 - Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit. Ea veritatis quae atque dignissimos fugit.
                 </p>
+                <div class="row d-block d-sm-none">
+                    <p><strong>Payment Methods</strong></p>
+                    <div class="col-12 payment-methods">
+                        <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+                        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                        <i class="fa fa-cc-discover" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row d-block d-sm-none">
-    <div class="col-12 payment-methods">
-        <i class="fa fa-cc-stripe" aria-hidden="true"></i>
-        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
-        <i class="fa fa-cc-visa" aria-hidden="true"></i>
-        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
-        <i class="fa fa-cc-discover" aria-hidden="true"></i>
     </div>
 </div>
