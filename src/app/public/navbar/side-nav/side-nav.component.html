@@ -6,36 +6,36 @@
     <div class="offcanvas-body">
       <nav class="nav flex-column">
         <ul class="side-navbar" *ngFor="let routers of navbarRoutersData">
-          <li class="nav-item active"><a class="nav-link" [routerLink]="[routers.home]"><i class="fa fa-home me-2"></i>Home</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="[routers.products]"><i class="fa fa-shopping-cart  me-2"></i>Shop</a></li>
+          <li class="nav-item active"><a class="nav-link" data-bs-dismiss="offcanvas" [routerLink]="[routers.home]"><i class="fa fa-home me-2"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-dismiss="offcanvas" [routerLink]="[routers.products]"><i class="fa fa-shopping-cart  me-2"></i>Shop</a></li>
           <div>
             <li class="nav-item dropdown">
-              <a class="nav-link  dropdown-toggle" [routerLink]="[routers.products]" data-bs-toggle="dropdown"><i
+              <a class="nav-link  dropdown-toggle" [routerLink]="" data-bs-toggle="dropdown"><i
                   class="fa fa-female me-2"></i>Women</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" [routerLink]=""> Submenu item 1</a></li>
-                <li><a class="dropdown-item" [routerLink]=""> Submenu item 2 </a></li>
-                <li><a class="dropdown-item" [routerLink]=""> Submenu item 3 </a></li>
+                <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Women's Collection 1</a></li>
+                <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Women's Collection 2</a></li>
+                <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Women's Collection 3 </a></li>
               </ul>
             </li>
           </div>
           <li class="nav-item dropdown">
-            <a class="nav-link  dropdown-toggle" [routerLink]="[routers.products]" data-bs-toggle="dropdown"><i class="fa fa-male me-2"></i>Men</a>
+            <a class="nav-link  dropdown-toggle" [routerLink]="" data-bs-toggle="dropdown"><i class="fa fa-male me-2"></i>Men</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" [routerLink]=""> Submenu item 1</a></li>
-              <li><a class="dropdown-item" [routerLink]=""> Submenu item 2 </a></li>
-              <li><a class="dropdown-item" [routerLink]=""> Submenu item 3 </a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Men's Collection 1</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Men's Collection 2</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas">Men's Collection 3</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="[routers.products]"><i class="fa fa-bullhorn me-2"></i>Sales</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="[routers.contact]"><i class="fa fa-address-book me-2"></i>Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="[routers.products]" data-bs-dismiss="offcanvas"><i class="fa fa-bullhorn me-2"></i>Sales</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="[routers.contact]" data-bs-dismiss="offcanvas"><i class="fa fa-address-book me-2"></i>Contacts</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;"><i class="fa fa-ellipsis-v me-2" aria-hidden="true"></i>More</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" [routerLink]="[routers.aboutUs]">About Us</a></li>
-              <li><a class="dropdown-item" [routerLink]="[routers.shoppingCart]">Shopping Cart</a></li>
-              <li><a class="dropdown-item" [routerLink]="[routers.accountDashboard]">Account Dashboard</a></li>
-              <li><a class="dropdown-item" [routerLink]="[routers.checkout]">Checkout</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.aboutUs]" data-bs-dismiss="offcanvas">About Us</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.shoppingCart]" data-bs-dismiss="offcanvas">Shopping Cart</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.accountDashboard]" data-bs-dismiss="offcanvas">Account Dashboard</a></li>
+              <li><a class="dropdown-item" [routerLink]="[routers.checkout]" data-bs-dismiss="offcanvas">Checkout</a></li>
             </ul>
           </li>
         </ul>
@@ -43,20 +43,20 @@
       <div class="dropdown">
         <button class="dropbtn">ENG <i class="arrow down"></i></button>
         <div class="dropdown-content">
-          <a href="#">ENG</a>
-          <a href="#">SPN</a>
-          <a href="#">RUS</a>
+          <a href="#" data-bs-dismiss="offcanvas">ENG</a>
+          <a href="#" data-bs-dismiss="offcanvas">SPN</a>
+          <a href="#" data-bs-dismiss="offcanvas">RUS</a>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">USD <i class="arrow down"></i></button>
         <div class="dropdown-content">
-          <a href="#">USD</a>
-          <a href="#">EUR</a>
-          <a href="#">RUB</a>
+          <a href="#" data-bs-dismiss="offcanvas">USD</a>
+          <a href="#" data-bs-dismiss="offcanvas">EUR</a>
+          <a href="#" data-bs-dismiss="offcanvas">RUB</a>
         </div>
       </div>
-      <button href="#" class="position-absolute fixed-bottom"><i class="fa fa-sign-out me-2" aria-hidden="true"></i>Log
+      <button href="#" class="position-absolute fixed-bottom" data-bs-dismiss="offcanvas"><i class="fa fa-sign-out me-2" aria-hidden="true"></i>Log
         Out</button>
     </div>
   </div>
