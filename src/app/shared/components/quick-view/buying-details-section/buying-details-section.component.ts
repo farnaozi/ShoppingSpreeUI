@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/shared/models/cart-item.model';
 import { Product } from 'src/app/shared/models/product.model';
+import { ProductService } from 'src/app/shared/services/product.service';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
 @Component({
@@ -14,8 +15,7 @@ export class BuyingDetailsSectionComponent implements OnInit {
   selectedColor:string = '';
   quantity:number = 1;
   reviewStarCount:number[] = [];
-  constructor(private shoppingCartService:ShoppingCartService) {
-
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
@@ -31,18 +31,8 @@ export class BuyingDetailsSectionComponent implements OnInit {
     this.selectedColor = color;
   }
 
-  createCartItem(): CartItem{
-    let cartItem:CartItem = {
-      quantity:this.quantity,
-      size:this.selectedSize,
-      color: this.selectedColor,
-      product: this.product!
-    }
-    return cartItem;
-  }
-
   addToCart(){
-    this.shoppingCartService.saveCartItem(this.createCartItem());
+    this.productService.addToCart(this.product!, this.quantity)
   }
 
   counter(reviews:any[] | undefined) {

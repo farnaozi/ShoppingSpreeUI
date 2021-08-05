@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { CartItem } from '../models/cart-item.model';
 import { Product } from '../models/product.model';
+import { ShoppingCartService } from './shopping-cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -73,6 +75,9 @@ export class ProductService {
     }
   ];
 
+  constructor(private shoppingCartService: ShoppingCartService){
+  }
+
   getProducts() {
     return this.createObservable(this.products);
   }
@@ -95,6 +100,20 @@ export class ProductService {
       .pipe(tap(products => {
         products.push({ ...product });
       }));
+  }
+
+  createCartItem(product:Product, quantity:number): CartItem{
+    let cartItem:CartItem = {
+      quantity: quantity,
+      size: product.sizes[0],
+      color: product.colors[0],
+      product: product
+    }
+    return cartItem;
+  }
+
+  addToCart(product:Product, quantity:number){
+    this.shoppingCartService.saveCartItem(this.createCartItem(product, quantity));
   }
 
   createObservable(data: Product[]) {
