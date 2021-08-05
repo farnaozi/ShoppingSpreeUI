@@ -12,7 +12,9 @@
 
 .side-image-box{
     height: 93px;
-    margin-bottom: 16px;
+    
+    display: inline-block;
+    margin-bottom: 4px;
 }
 
 .side-image{
@@ -23,6 +25,7 @@
     background-size:cover;
     transition: opacity 0.3s;
     object-fit: contain;
+    margin-right:16px;
 }
 
 .side-image:hover{
@@ -34,11 +37,13 @@
 }
 
 .images-scroll{
-    max-height: 548px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    overflow-x: scroll;
+    /* max-height: 548px; */
 }
-
 ::-webkit-scrollbar {
-    width: 4px;
+    height: 4px;
   }
   
   ::-webkit-scrollbar-track {
@@ -48,22 +53,4 @@
   ::-webkit-scrollbar-thumb {
     background: #a1a1a1; 
     border-radius: 7px;
-  }
-
-  @media only screen and (max-width: 769px) {
-    .side-image-box{
-        display: inline-block;
-        margin-bottom: 4px;
-    }
-    .side-image{
-        margin-right:16px;
-    }
-    .images-scroll{
-        margin: 0 auto;
-        margin-bottom: 10px;
-        overflow-x: scroll;
-    }
-    ::-webkit-scrollbar {
-        height: 4px;
-      }
   }
