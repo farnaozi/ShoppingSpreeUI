@@ -4,8 +4,7 @@ import { MyWishListService } from 'src/app/shared/services/my-wishlist.service';
 @Component({
   selector: 'app-wish-list',
   templateUrl: './wish-list.component.html',
-  styleUrls: ['./wish-list.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./wish-list.component.css']
 })
 export class WishListComponent implements OnInit {
   wishListData:any;
