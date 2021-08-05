@@ -9,6 +9,7 @@ import { LoginRegisterComponent } from './shared/components/login-register/login
 import { LoginRegisterModule } from './shared/components/login-register/login-register.module';
 import { QuickViewComponent } from './shared/components/quick-view/quick-view.component';
 import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
+import { MaterialModule } from './shared/modules/material.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { QuickViewModule } from './shared/components/quick-view/quick-view.modul
     PublicModule,
     BrowserAnimationsModule,
     LoginRegisterModule,
-    QuickViewModule
+    QuickViewModule,
+    MaterialModule
   ],
   providers: [],
   entryComponents:[LoginRegisterComponent, QuickViewComponent,

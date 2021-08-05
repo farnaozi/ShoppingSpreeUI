@@ -72,6 +72,17 @@ p{
     margin-top: 6px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @media screen and (max-width:604px) {
     .buy-now,.form-control,.add-to-cart {
         width:100% !important;

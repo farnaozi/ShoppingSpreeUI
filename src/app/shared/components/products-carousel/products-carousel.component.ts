@@ -38,6 +38,9 @@ export class ProductsCarouselComponent implements OnInit {
     return new Array(0);
   }
 
+  addToCart(product:Product){
+    this.productService.addToCart(product, 1)
+  }
 
   customOptions: OwlOptions = {
     margin: 30,

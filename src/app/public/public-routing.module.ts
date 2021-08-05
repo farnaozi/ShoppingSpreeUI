@@ -5,7 +5,7 @@ import { PublicComponent } from './public.component';
 const routes: Routes = [
   { path: '', 
   component:PublicComponent, children: [
-    {path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)},
+    {path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), pathMatch: 'full'},
     {path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule)},
     {path: 'product/:id', loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule)},
     {path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)},

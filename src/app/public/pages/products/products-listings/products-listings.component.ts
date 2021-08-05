@@ -16,8 +16,7 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
 export class ProductsListingsComponent implements OnInit {
   products: Product[] = [];
   constructor(private modalService:ModalService, 
-    private productService: ProductService,
-    private shoppingCartService: ShoppingCartService) {
+    private productService: ProductService) {
   }
 
   openQuickView(id:number){
@@ -39,18 +38,8 @@ export class ProductsListingsComponent implements OnInit {
 
     return new Array(0);
   }
-
-  createCartItem(product:Product): CartItem{
-    let cartItem:CartItem = {
-      quantity:1,
-      size:product.sizes[0],
-      color: product.colors[0],
-      product: product
-    }
-    return cartItem;
-  }
-
+  
   addToCart(product:Product){
-    this.shoppingCartService.saveCartItem(this.createCartItem(product));
+    this.productService.addToCart(product, 1)
   }
 }
