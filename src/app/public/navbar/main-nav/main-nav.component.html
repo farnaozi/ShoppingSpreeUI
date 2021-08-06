@@ -54,19 +54,19 @@
                   <span class="badge">2</span>
                 </i></a>
               <div class="container p-3 shopping-cart-dropdown-content">
-                <div class="row about-item-cart" *ngFor="let x of [0,1]">
+                <div class="row about-item-cart" *ngFor="let cartItem of this.shoppingCartService.shoppingCartItems ">
                   <div class="col-4 p-1">
                     <a [routerLink]="[routers.productId]"><img src="/assets/images/product.jpg" alt="" class="shopping-btn-img"></a>
                   </div>
                   <div class="col-8 text-center pt-3">
                     <a [routerLink]="[routers.productId]"><span>New Tops</span></a><br>
-                    <span>2 X $44.99</span>
+                    <span>{{cartItem.quantity}} X ${{cartItem.product.salePrice > 0 ? cartItem.product?.salePrice : cartItem.product.price}}</span>
                   </div>
                 </div>
                 <div>
                   <div class="total-price">
                     <span>Total Price:</span>
-                    <span style="float: right;">$90.99</span>
+                    <span style="float: right;">${{this.shoppingCartService.getShoppingCartItemsTotalPrice()}}</span>
                   </div>
                   <span class="view-cart">
                     <a [routerLink]="[routers.shoppingCart]">View Cart</a>

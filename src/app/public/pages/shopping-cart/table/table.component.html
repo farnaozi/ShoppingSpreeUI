@@ -10,68 +10,69 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let shoppingData of shoppingCartData">
+        <tr *ngFor="let shoppingData of this.shoppingCartService.shoppingCartItems">
             <td style="width: 100px;">
-                <img src="{{shoppingData.imgSrc}}" class="product-image" alt="{{shoppingData.imgAlt}}">
+                <img src="/assets/images/product.jpg" class="product-image" alt="product">
             </td>
             <td>
                 <div class="cart-product-desc">
-                    <p>{{shoppingData.itemName}}</p>
-                    <b>{{shoppingData.itemPrice | number : '1.2-2'}}</b>
-                    <p>Color: <span [style.background-color]="shoppingData.itemColor" class="color"></span></p>
-                    <p>Size:<strong>{{shoppingData.itemSize}}</strong></p>
+                    <p>{{shoppingData.product.name}}</p>
+                    <b>${{shoppingData.product.salePrice > 0 ? shoppingData.product.salePrice :
+                        shoppingData.product.price | number : '1.2-2'}}</b>
+                    <p>Color: <span [style.background-color]="shoppingData.color" class="color"></span></p>
+                    <p>Size:<strong>{{shoppingData.size}}</strong></p>
                 </div>
             </td>
             <td class="hidden-els">
                 <div class="btn-group" role="group">
-                    <button class="btn" type="button" (click)="reduceAmount()">
+                    <button class="btn" type="button" (click)="reduceAmount(shoppingData)">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <button disabled class="btn">
-                        <strong>{{itemAmount}}</strong>
+                        <strong>{{shoppingData.quantity}}</strong>
                     </button>
-                    <button class="btn" type="button" (click)="increaseAmount()">
+                    <button class="btn" type="button" (click)="increaseAmount(shoppingData)">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </td>
             <td class="hidden-els">
-                <strong>{{shoppingData.itemPrice * itemAmount | number : '1.2-2'}}</strong>
+                <strong>${{shoppingData.product.salePrice > 0 ? shoppingData.product.salePrice*shoppingData.quantity :
+                    shoppingData.product.price*shoppingData.quantity | number : '1.2-2'}}</strong>
             </td>
             <td class="text-center show-on-small-screen">
                 <div class="btn-group" role="group">
-                    <button class="btn" type="button" (click)="reduceAmount()">
+                    <button class="btn" type="button" (click)="reduceAmount(shoppingData)">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <button disabled class="btn">
-                        <strong>{{itemAmount}}</strong>
+                        <strong>{{shoppingData.quantity}}</strong>
                     </button>
-                    <button class="btn" type="button" (click)="increaseAmount()">
+                    <button class="btn" type="button" (click)="increaseAmount(shoppingData)">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
-                <div>{{shoppingData.itemPrice * itemAmount | number : '1.2-2'}}</div>
-                <span><button class="btn cart-delete"><i
-                            class="fa fa-close"></i></button></span>
+                <div>${{shoppingData.product.salePrice > 0 ? shoppingData.product.salePrice*shoppingData.quantity :
+                    shoppingData.product.price*shoppingData.quantity | number : '1.2-2'}}</div>
+                <span><button class="btn cart-delete"><i class="fa fa-close"></i></button></span>
             </td>
             <td class="hidden-els">
-                <button class="btn cart-delete float-end"><i
-                        class="fa fa-close"></i></button>
+                <button (click)="deleteCartItem(shoppingData)" class="btn cart-delete float-end"><i class="fa fa-close"></i></button>
             </td>
         </tr>
-        <tr >
-            <td colspan="5"> 
-              <div class="float-start">
-                <div>
-                    <strong>DISCOUNT: -15%</strong>
+        <tr>
+            <td colspan="5">
+                <div class="float-start">
+                    <div>
+                        <strong>DISCOUNT: -0%</strong>
+                    </div>
+                    <div>
+                        <strong>TOTAL: ${{this.shoppingCartService.getShoppingCartItemsTotalPrice()}}</strong>
+                    </div>
                 </div>
-                <div>
-                    <strong>TOTAL: $12.75</strong>
-                </div>
-            </div>
-            <div class="float-end">
-                <button type="button" style="margin-top:4px" class="default-button">Check Out</button>
-            </div>
+                <!-- <div class="float-end">
+                    <button type="button" style="margin-top:4px" class="default-button">Check Out</button>
+                </div> -->
             </td>
         </tr>
     </tbody>

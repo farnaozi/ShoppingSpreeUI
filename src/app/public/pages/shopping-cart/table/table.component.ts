@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartItem } from 'src/app/shared/models/cart-item.model';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
 @Component({
@@ -7,24 +8,28 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  shoppingCartData:any;
   itemAmount:number = 1;
   itemAmountFullPrice:any;
   itemPrice:any;
-  constructor(private shoppingCartService:ShoppingCartService) { }
+  constructor(public shoppingCartService:ShoppingCartService) { }
 
   ngOnInit(): void {
-    this.shoppingCartService.getShoppingCartData().subscribe(data => {
-      this.shoppingCartData = data;
-    })
+    this.shoppingCartService.shoppingCartItems = this.shoppingCartService.getShoppingCartItems();
   }
-  reduceAmount(){
-    if(this.itemAmount > 1){
-      this.itemAmount--;
+  reduceAmount(cartItem: CartItem){
+    if(cartItem.quantity > 1){
+      cartItem.quantity--;
+      this.shoppingCartService.updateCartItemQuantity(cartItem);
     }
   }
-  increaseAmount(){
-    this.itemAmount++;    
+  increaseAmount(cartItem: CartItem){
+      cartItem.quantity++;
+      this.shoppingCartService.updateCartItemQuantity(cartItem); 
+  }
+
+  deleteCartItem(cartItem: CartItem){
+    this.shoppingCartService.deleteCartItem(cartItem);
+    this.shoppingCartService.shoppingCartItems = this.shoppingCartService.getShoppingCartItems();
   }
 
 }
