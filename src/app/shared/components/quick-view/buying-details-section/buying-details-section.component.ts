@@ -32,7 +32,8 @@ export class BuyingDetailsSectionComponent implements OnInit {
   }
 
   addToCart(){
-    this.productService.addToCart(this.product!, this.quantity)
+    this.productService.addToCart(this.product!, this.quantity, 
+      this.selectedColor, this.selectedSize)
   }
 
   counter(reviews:any[] | undefined) {

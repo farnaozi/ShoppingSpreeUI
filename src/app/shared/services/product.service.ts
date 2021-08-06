@@ -102,18 +102,21 @@ export class ProductService {
       }));
   }
 
-  createCartItem(product:Product, quantity:number): CartItem{
+  createCartItem(product:Product, quantity:number,
+    selectedColor?: string, selectedSize?: string): CartItem{
     let cartItem:CartItem = {
       quantity: quantity,
-      size: product.sizes[0],
-      color: product.colors[0],
+      size: selectedSize == undefined ? product.sizes[0] : selectedSize,
+      color: selectedColor == undefined ? product.colors[0] : selectedColor,
       product: product
     }
     return cartItem;
   }
 
-  addToCart(product:Product, quantity:number){
-    this.shoppingCartService.saveCartItem(this.createCartItem(product, quantity));
+  addToCart(product:Product, quantity:number, 
+    selectedColor?: string, selectedSize?: string){
+    this.shoppingCartService.saveCartItem(this.createCartItem(product, quantity,
+      selectedColor, selectedSize));
   }
 
   createObservable(data: Product[]) {
