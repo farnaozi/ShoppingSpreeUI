@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from '../models/cart-item.model';
 import { of } from 'rxjs';
+import { AlertService } from './alert.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +9,31 @@ import { of } from 'rxjs';
 export class ShoppingCartService {
   public shoppingCartItems:any;
 
-  constructor() { }
+  constructor(private alertService: AlertService) { }
 
   public getShoppingCartItems() {
     return JSON.parse(localStorage.getItem("cart")!)
   }
 
+  public getShoppingCartItemsCount() {
+    let tempCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart")!);
+    if(tempCartItems == null)
+      return 0;
+
+    let count = 0;
+    tempCartItems.forEach(item => {
+      count += item.quantity;
+    });
+
+    return count;
+  }
+
   public getShoppingCartItemsTotalPrice(){
     let total: number = 0;
     let tempCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart")!);
+    if(tempCartItems == null)
+      return 0;
+    
     tempCartItems.forEach(item =>{
       if(item.product.salePrice! > 0)
         total += item.product.salePrice!*item.quantity;
@@ -29,10 +46,11 @@ export class ShoppingCartService {
 
   public saveCartItem(cartItem: CartItem) {
     if (localStorage.getItem("cart") == null) {
-      alert("new added to empty")
+      // alert("new added to empty")
       let cartArray: CartItem[] = [];
       cartArray.push({ ...cartItem })
       localStorage.setItem("cart", JSON.stringify(cartArray));
+      this.shoppingCartItems = this.getShoppingCartItems();
     }
     else {
       let tempCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart")!);
@@ -41,7 +59,7 @@ export class ShoppingCartService {
       if (index == -1) {
         tempCartItems.push({ ...cartItem });
         this.finalAct(tempCartItems);
-        alert("new added to existing")
+        // alert("new added to existing")
       }
       else {
         // let res = tempCartItems.filter(cart => cart.product.id == cartItem.product.id)
@@ -54,9 +72,10 @@ export class ShoppingCartService {
         // }
         tempCartItems[index].quantity += cartItem.quantity;
         this.finalAct(tempCartItems);
-        alert("new added and updated existing")
+        // alert("new added and updated existing")
       }
     }
+    this.alertService.showSuccess("Item has been Added to Cart")
   }
 
   // public updateCartItem(id: number, updatedCartItem: CartItem) {
@@ -83,6 +102,11 @@ export class ShoppingCartService {
   }
 
   private finalAct(cartItems: CartItem[]): void {
+    if(cartItems.length == 0){
+      localStorage.removeItem("cart");
+      return;
+    }
+
     localStorage.removeItem("cart");
     localStorage.setItem("cart", JSON.stringify(cartItems));
     this.shoppingCartItems = this.getShoppingCartItems();

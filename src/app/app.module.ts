@@ -10,6 +10,7 @@ import { LoginRegisterModule } from './shared/components/login-register/login-re
 import { QuickViewComponent } from './shared/components/quick-view/quick-view.component';
 import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
 import { MaterialModule } from './shared/modules/material.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -20,10 +21,11 @@ import { MaterialModule } from './shared/modules/material.module';
     BrowserModule,
     AppRoutingModule,
     PublicModule,
-    BrowserAnimationsModule,
     LoginRegisterModule,
     QuickViewModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot()
   ],
   providers: [],
   entryComponents:[LoginRegisterComponent, QuickViewComponent,

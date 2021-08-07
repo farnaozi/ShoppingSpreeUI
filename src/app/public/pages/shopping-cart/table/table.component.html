@@ -10,6 +10,13 @@
         </tr>
     </thead>
     <tbody>
+        <tr *ngIf="this.shoppingCartService.getShoppingCartItemsCount() == 0">
+            <td colspan="4">
+                <h3 class="h3 text-center py-5">
+                    Your Cart Is Empty
+                </h3>
+            </td>
+        </tr>
         <tr *ngFor="let shoppingData of this.shoppingCartService.shoppingCartItems">
             <td style="width: 100px;">
                 <img src="/assets/images/product.jpg" class="product-image" alt="product">
@@ -54,7 +61,7 @@
                 </div>
                 <div>${{shoppingData.product.salePrice > 0 ? shoppingData.product.salePrice*shoppingData.quantity :
                     shoppingData.product.price*shoppingData.quantity | number : '1.2-2'}}</div>
-                <span><button class="btn cart-delete"><i class="fa fa-close"></i></button></span>
+                <span><button (click)="deleteCartItem(shoppingData)" class="btn cart-delete"><i class="fa fa-close"></i></button></span>
             </td>
             <td class="hidden-els">
                 <button (click)="deleteCartItem(shoppingData)" class="btn cart-delete float-end"><i class="fa fa-close"></i></button>
