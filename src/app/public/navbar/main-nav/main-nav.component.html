@@ -51,9 +51,16 @@
           <li>
             <div class="shopping-cart-dropbtn">
               <a class="notification"><i class="fa fa-shopping-cart">
-                  <span class="badge">2</span>
+                  <span class="badge">{{this.shoppingCartService.getShoppingCartItemsCount()}}</span>
                 </i></a>
               <div class="container p-3 shopping-cart-dropdown-content">
+                <div *ngIf="this.shoppingCartService.getShoppingCartItemsCount() == 0" class="row about-item-cart">
+                  <div class="col-12">
+                    <h5 class="h5 text-center">
+                      Your Cart Is Empty
+                    </h5>
+                  </div>
+                </div>
                 <div class="row about-item-cart" *ngFor="let cartItem of this.shoppingCartService.shoppingCartItems ">
                   <div class="col-4 p-1">
                     <a [routerLink]="[routers.productId]"><img src="/assets/images/product.jpg" alt="" class="shopping-btn-img"></a>
@@ -64,7 +71,7 @@
                   </div>
                 </div>
                 <div>
-                  <div class="total-price">
+                  <div *ngIf="this.shoppingCartService.getShoppingCartItemsCount() != 0" class="total-price">
                     <span>Total Price:</span>
                     <span style="float: right;">${{this.shoppingCartService.getShoppingCartItemsTotalPrice()}}</span>
                   </div>
