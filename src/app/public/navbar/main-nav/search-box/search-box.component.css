@@ -9,3 +9,9 @@ input[type=text] {
     background-color: white;
     padding: 7px 10px 7px 10px;
 }
+
+input[type=text]:focus {
+    transition: 0.4s;
+    outline: none;
+    border: 2px solid rgb(184, 184, 184);
+}
