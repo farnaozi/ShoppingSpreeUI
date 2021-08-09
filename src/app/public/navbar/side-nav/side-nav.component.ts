@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarRoutersService } from '../navbar-routers.service';
+import { NavbarRoutersService } from '../../../shared/services/navbar-routers.service';
 
 @Component({
   selector: 'app-side-nav',

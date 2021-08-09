@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/shared/models/cart-item.model';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
-import { NavbarRoutersService } from '../navbar-routers.service';
+import { NavbarRoutersService } from '../../../shared/services/navbar-routers.service';
 
 @Component({
   selector: 'app-main-nav',
