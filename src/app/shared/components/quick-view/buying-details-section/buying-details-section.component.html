@@ -50,8 +50,8 @@
 </div>
 <div class="row">
     <div class="col-12">
-        <button class="btn ps-0">
-            <i class="fa fa-heart-o" aria-hidden="true"></i> ADD TO WISHLIST
+        <button class="btn ps-0" (click)="addToWishlist()">
+            <i class="fa fa-heart-o" aria-hidden="false" [style.color]="updateWishlistIcon ? 'red' : '' "></i> ADD TO WISHLIST
         </button>
     </div>
 </div>

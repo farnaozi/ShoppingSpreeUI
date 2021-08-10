@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Product } from '../../models/product.model';
 import { ModalService } from '../../services/modal.service';
+import { MyWishListService } from '../../services/my-wishlist.service';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class ProductsCarouselComponent implements OnInit {
   @Input() data:Product[] = [];
   @Input() centerTitle:boolean = false;
   @Input() width:string = "";
-  constructor(private modalService:ModalService, private productService:ProductService) { }
+  constructor(private modalService:ModalService, private productService:ProductService
+    ,private myWishlistService:MyWishListService) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(data=>{
@@ -37,9 +39,13 @@ export class ProductsCarouselComponent implements OnInit {
 
     return new Array(0);
   }
-
+  
   addToCart(product:Product){
-    this.productService.addToCart(product, 1)
+    this.productService.addToCart(product, 1);
+  }
+
+  addToWishlist(myWishlistProd: Product){
+    this.myWishlistService.addToWishlist(myWishlistProd, 1)
   }
 
   customOptions: OwlOptions = {

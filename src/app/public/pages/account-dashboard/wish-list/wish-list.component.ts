@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { WishlistItem } from 'src/app/shared/models/wishlist-item.model';
 import { MyWishListService } from 'src/app/shared/services/my-wishlist.service';
 
 @Component({
@@ -7,36 +8,28 @@ import { MyWishListService } from 'src/app/shared/services/my-wishlist.service';
   styleUrls: ['./wish-list.component.css']
 })
 export class WishListComponent implements OnInit {
-  wishListData:any;
   itemAmount:number = 1;
   itemAmountFullPrice:any;
   itemPrice:any;
-
-  constructor(private myWishList:MyWishListService) {
-   }
+  constructor(public myWishlistService:MyWishListService) { }
 
   ngOnInit(): void {
-    this.myWishList.getMyWishListData().subscribe(data => {
-      this.wishListData = data;
-    });
+    this.myWishlistService.WishlistItems = this.myWishlistService.getWishlistItems();
   }
-
-  reduceAmount(){
-    if(this.itemAmount > 1){
-      this.itemAmount--;
+  reduceAmount(WishlistItem: WishlistItem){
+    if(WishlistItem.quantity > 1){
+      WishlistItem.quantity--;
+      this.myWishlistService.updateWishlistItemQuantity(WishlistItem);
     }
   }
-  increaseAmount(){
-    this.itemAmount++;    
+  increaseAmount(WishlistItem: WishlistItem){
+      WishlistItem.quantity++;
+      this.myWishlistService.updateWishlistItemQuantity(WishlistItem); 
   }
 
-  removeElementFromArray(element: number) {
-    this.wishListData.forEach((value:any,index:number)=>{
-        if(value == element) 
-          this.wishListData.splice(index,1);
-    });
-    console.log(this.myWishList);
+  deleteWishlistItem(WishlistItem: WishlistItem){
+    this.myWishlistService.deleteWishlistItem(WishlistItem);
+    this.myWishlistService.WishlistItems = this.myWishlistService.getWishlistItems();
   }
-
 
 }
