@@ -1,6 +1,11 @@
-<p class="filter-title">PRICE</p>
+<p class="filter-title">PRICE  
+    <i (click)="clear()" *ngIf="isPriceRangeChanged()" class="clear-filter fa fa-close"></i>
+</p>
 <div class="filter">
     <div class="custom-slider">
-        <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+        <ngx-slider [(value)]="this.productService.productsFilters.startPrice" 
+        [(highValue)]="this.productService.productsFilters.endPrice" 
+        [options]="options"
+        (userChange)="priceRangeChanged()"></ngx-slider>
     </div>
 </div>

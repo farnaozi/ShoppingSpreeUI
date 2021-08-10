@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   public product:Product | undefined = {
     id:0,
     name:'',
+    category: '',
     price:0,
     salePrice:0,
     reviews:[],

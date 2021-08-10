@@ -1,7 +1,9 @@
-<p class="filter-title">SIZE</p>
+<p class="filter-title">SIZE
+    <i (click)="clear()" *ngIf="getSizesCount() != 0" class="clear-filter fa fa-close"></i>
+</p>
 <div class="filter">
     <div *ngFor="let size of ['S', 'M', 'L', 'XS']" class="form-check">
-        <input class="form-check-input" type="checkbox" [id]="size">
+        <input [checked]="isSizeSelected(size)" (click)="selectSize(size)" class="form-check-input" type="checkbox" [id]="size">
         <label class="form-check-label" [for]="size">
             {{size}}
         </label>

@@ -15,6 +15,7 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
 })
 export class ProductsListingsComponent implements OnInit {
   products: Product[] = [];
+
   constructor(private modalService:ModalService, 
     private productService: ProductService) {
   }
@@ -26,7 +27,21 @@ export class ProductsListingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data=> this.products = data)
+    this.productService.loader = true;
+    this.productService.productsFiltered.subscribe(() => {
+      this.productService.getFilteredProducts().subscribe(data=> {
+        setTimeout( ()=> {
+          this.productService.loader = false;
+          this.products = [...data]
+        }, 300);
+      });
+    });
+    this.productService.getFilteredProducts().subscribe(data=> {
+      setTimeout( ()=> {
+        this.productService.loader = false;
+        this.products = [...data]
+      }, 300);
+    });
   }
 
   counter(reviews:any[]) {
@@ -37,6 +52,10 @@ export class ProductsListingsComponent implements OnInit {
     }
 
     return new Array(0);
+  }
+
+  getLoaderStatus(){
+    return this.productService.loader;
   }
   
   addToCart(product:Product){

@@ -1,4 +1,5 @@
-<p class="filter-title">REVIEWS</p>
+<p class="filter-title">REVIEWS 
+    <i (click)="clear()" *ngIf="getSelectedRating() != 0" class="clear-filter fa fa-close"></i></p>
 <div class="filter">
-    <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
+    <i (click)="selectRating(star)" *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"></i>
 </div>

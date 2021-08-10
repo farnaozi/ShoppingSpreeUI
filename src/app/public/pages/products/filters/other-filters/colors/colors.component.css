@@ -5,4 +5,13 @@
     border-radius: 50%;
     border: 2px solid #c9c9c9;
     cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.color:hover{
+  opacity: 0.7;
+}
+
+.active-color{
+    opacity: 0.7;
 }

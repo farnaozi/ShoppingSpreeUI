@@ -1,6 +1,7 @@
-<div class="row">
+
+<div class="row mt-4">
     <div *ngFor="let product of products; let i = index" class="col-xl-4 col-lg-6 col-sm-6 product-card">
-        <div [routerLink]="['/product', product.id]" class="product-image">
+        <div [style.background-image]="'url(assets/images/product.jpg)'" [routerLink]="['/product', product.id]" class="product-image">
             <span *ngIf="product.salePrice != undefined" class="sale-sign">
                 {{(product.salePrice/product.price)*100 | number: '1.0-0'}}% OFF
             </span>
@@ -36,9 +37,14 @@
         </div>
     </div>
 </div>
-<div class="row center">
+<div *ngIf="products.length == 6" class="row center">
     <div class="col-12 text-center">
         <button class="btn load-more">LOAD MORE <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
     </div>
  
+</div>
+<div *ngIf="products.length == 0 && !getLoaderStatus()" class="row center mt-5">
+    <div class="col-12 text-center">
+      <h3 class="h3">No Product Was Found</h3>
+    </div>
 </div>
