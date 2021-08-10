@@ -3,7 +3,8 @@
 }
 
 .product-image{
-    background: url(/assets/images/product.jpg) top no-repeat;
+    /* background: url(assets/images/product.jpg) top no-repeat; */
+    background:top no-repeat;
     height: 529px !important;
     cursor:default!important;
     opacity: 1!important;
@@ -18,7 +19,8 @@
 }
 
 .side-image{
-    background: url(/assets/images/product.jpg) top no-repeat;
+    /* background: url(assets/images/product.jpg) top no-repeat; */
+    background:top no-repeat;
     height: 93px;
     width: 93px;
     cursor: pointer;
