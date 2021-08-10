@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/shared/models/cart-item.model';
 import { Product } from 'src/app/shared/models/product.model';
+import { MyWishListService } from 'src/app/shared/services/my-wishlist.service';
 import { ProductService } from 'src/app/shared/services/product.service';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
@@ -11,11 +12,12 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
 })
 export class BuyingDetailsSectionComponent implements OnInit {
   @Input() product: Product | undefined;
+
   selectedSize:string = '';
   selectedColor:string = '';
   quantity:number = 1;
   reviewStarCount:number[] = [];
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,private myWishlistService:MyWishListService) {
   }
 
   ngOnInit(): void {
@@ -45,4 +47,11 @@ export class BuyingDetailsSectionComponent implements OnInit {
 
     return new Array(0);
   }
+
+  updateWishlistIcon:boolean = false;
+
+  addToWishlist(){
+    this.updateWishlistIcon = !this.updateWishlistIcon;
+  }
+
 }

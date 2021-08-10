@@ -29,7 +29,7 @@
                   </div>
                   <div class="buttons">
                     <i (click)="openQuickView(product.id)" class="fa fa-eye" aria-hidden="true"></i>
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-heart-o" (click)="addToWishlist(product)" aria-hidden="true"></i>
                     <i (click)="addToCart(product)" class="fa fa-shopping-cart" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -45,6 +45,6 @@
 </div>
 <div *ngIf="products.length == 0 && !getLoaderStatus()" class="row center mt-5">
     <div class="col-12 text-center">
-      <h3 class="h3">No Product Was Found</h3>
+      <h3 class="h3 text-muted">No Product Was Found</h3>
     </div>
 </div>

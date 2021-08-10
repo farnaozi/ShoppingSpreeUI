@@ -5,6 +5,7 @@ import { QuickViewComponent } from 'src/app/shared/components/quick-view/quick-v
 import { CartItem } from 'src/app/shared/models/cart-item.model';
 import { Product } from 'src/app/shared/models/product.model';
 import { ModalService } from 'src/app/shared/services/modal.service';
+import { MyWishListService } from 'src/app/shared/services/my-wishlist.service';
 import { ProductService } from 'src/app/shared/services/product.service';
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
@@ -17,7 +18,7 @@ export class ProductsListingsComponent implements OnInit {
   products: Product[] = [];
 
   constructor(private modalService:ModalService, 
-    private productService: ProductService) {
+    private productService: ProductService,private myWishlistService:MyWishListService) {
   }
 
   openQuickView(id:number){
@@ -25,6 +26,11 @@ export class ProductsListingsComponent implements OnInit {
       this.modalService.openQuickView(data);
     });
   }
+
+  addToWishlist(myWishlistProd: Product){
+    this.myWishlistService.addToWishlist(myWishlistProd, 1)
+  }
+
 
   ngOnInit(): void {
     this.productService.loader = true;

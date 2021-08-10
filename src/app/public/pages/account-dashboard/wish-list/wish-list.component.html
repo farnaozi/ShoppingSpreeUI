@@ -15,27 +15,35 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let wishList of wishListData">
+                        <tr *ngIf="this.myWishlistService.getWishlistItemsCount() == 0">
+                            <td colspan="6">
+                                <h3 class="h3 text-center py-5 text-muted">
+                                    Your WishList Is Empty <i class="fa fa-heart-o" aria-hidden="false"></i>
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let wishList of this.myWishlistService.WishlistItems">
                             <td style="width: 100px;">
-                                <img src="{{wishList.imgSrc}}" class="product-image" alt="{{wishList.imgAlt}}">
+                                <img src="assets/images/product.jpg" class="product-image" alt="{{wishList.imgAlt}}">
                             </td>
                             <td>
                                 <div class="cart-product-desc">
-                                    <p>{{wishList.itemName}}</p>
-                                    <b>{{wishList.itemPrice | number : '1.2-2'}}</b>
-                                    <p>Color: <span [style.background-color]="wishList.itemColor" class="color"></span></p>
-                                    <p>Size:<strong>{{wishList.itemSize}}</strong></p>
+                                    <p>{{wishList.product.name}}</p>
+                                    <b>${{wishList.product.salePrice > 0 ? wishList.product.salePrice :
+                                        wishList.product.price | number : '1.2-2'}}</b>
+                                    <p>Color: <span [style.background-color]="wishList.color" class="color"></span></p>
+                                    <p>Size:<strong>{{wishList.size}}</strong></p>
                                 </div>
                             </td>
                             <td class="hidden-els">
                                 <div class="btn-group" role="group">
-                                    <button class="btn" type="button" (click)="reduceAmount()">
+                                    <button class="btn" type="button" (click)="reduceAmount(wishList)">
                                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                                     </button>
                                     <button disabled class="btn">
-                                        <strong>{{itemAmount}}</strong>
+                                        <strong>{{wishList.quantity}}</strong>
                                     </button>
-                                    <button class="btn" type="button" (click)="increaseAmount()">
+                                    <button class="btn" type="button" (click)="increaseAmount(wishList)">
                                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -44,32 +52,34 @@
                                 <span>{{wishList.availability ? 'In Stock' : 'Out Of Stock'}}</span>
                             </td>
                             <td class="hidden-els">
-                                <strong>{{wishList.itemPrice * itemAmount | number : '1.2-2'}}</strong>
+                                <strong>${{wishList.product.salePrice > 0 ? wishList.product.salePrice*wishList.quantity :
+                                    wishList.product.price*wishList.quantity | number : '1.2-2'}}</strong>
                             </td>
                             <td class="text-center show-on-small-screen">
                                 <div class="btn-group" role="group">
-                                    <button class="btn" type="button" (click)="reduceAmount()">
+                                    <button class="btn" type="button" (click)="reduceAmount(wishList)">
                                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                                     </button>
                                     <button disabled class="btn">
-                                        <strong>{{itemAmount}}</strong>
+                                        <strong>{{wishList.quantity}}</strong>
                                     </button>
-                                    <button class="btn" type="button" (click)="increaseAmount()">
+                                    <button class="btn" type="button" (click)="increaseAmount(wishList)">
                                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                     </button>
                                 </div>
                                 <div>{{wishList.itemPrice * itemAmount | number : '1.2-2'}}</div>
-                                <span>{{wishList.availability ? 'In Stock' : 'Out Of Stock'}}<button class="btn cart-delete"><i
+                                <span>${{wishList.product.salePrice > 0 ? wishList.product.salePrice*wishList.quantity :
+                                    wishList.product.price*wishList.quantity | number : '1.2-2'}}<button class="btn cart-delete" (click)="deleteWishlistItem(wishList)"><i
                                             class="fa fa-close"></i></button></span>
                             </td>
                             <td class="hidden-els">
-                                <button class="btn cart-delete float-end" (click)="removeElementFromArray(wishList.id)"><i
+                                <button class="btn cart-delete float-end" (click)="deleteWishlistItem(wishList)"><i
                                         class="fa fa-close"></i></button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <strong style="float: left;padding-top: 7px;">Total Price: $120.75</strong>
+                <strong style="float: left;padding-top: 7px;">Total Price: ${{this.myWishlistService.getWishlistItemsTotalPrice()}}</strong>
                 <button type="button" style="float: right;" class="default-button">Check Out</button>
             </mat-tab>
             <mat-tab label="Newsletters">

@@ -9,17 +9,17 @@ export class OurTeamDataService {
         return [
         {
             id: 0,
-            imgSrc: "assets/images/laptop-2561018_1920.jpg",
+            imgSrc: "assets/images/tie-690084_1920.jpg",
             imgAlt: "...",
-            memberName: "Alexandra Borenko",
+            memberName: "John Maleck",
             memberPosition: "Co-Founder",
             aboutMember: "Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.",
         },
         {
             id: 1,
-            imgSrc: "assets/images/tie-690084_1920.jpg",
+            imgSrc: "assets/images/laptop-2561018_1920.jpg",
             imgAlt: "...",
-            memberName: "John Doe",
+            memberName: "Alexandra Borenko",
             memberPosition: "Pro-Manager",
             aboutMember: "Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.",
         },

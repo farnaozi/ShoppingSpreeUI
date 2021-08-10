@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
     id:0,
     name:'',
     category: '',
+    availability:false,
     price:0,
     salePrice:0,
     reviews:[],
