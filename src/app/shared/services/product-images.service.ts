@@ -32,6 +32,21 @@ export class ProductImagesService {
             id: 4,
             imgSrc: "assets/images/product.jpg",
             imgAlt: "...",
+        },
+        {
+            id: 2,
+            imgSrc: "assets/images/product.jpg",
+            imgAlt: "...",
+        },
+        {
+            id: 3,
+            imgSrc: "assets/images/product.jpg",
+            imgAlt: "...",
+        },
+        {
+            id: 4,
+            imgSrc: "assets/images/product.jpg",
+            imgAlt: "...",
         }
     ]
 }

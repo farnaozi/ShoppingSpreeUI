@@ -10,9 +10,9 @@ export class MyWishListService {
         return of([
         {
             id: 0,
-            imgSrc: "/assets/images/product.jpg",
+            imgSrc: "assets/images/product.jpg",
             imgAlt: "...",
-            itemName: "Piqué Biker Jacket",
+            itemName: "Lorem Ipsum",
             itemPrice: 15.00,
             availability:false,
             itemColor: "blue",
@@ -20,9 +20,9 @@ export class MyWishListService {
         },
         {
             id: 1,
-            imgSrc: "/assets/images/product.jpg",
+            imgSrc: "assets/images/product.jpg",
             imgAlt: "...",
-            itemName: "Piqué Biker Jacket",
+            itemName: "Lorem Ipsum",
             itemPrice: 7.99,
             availability:true,
             itemColor: 'red',
@@ -31,9 +31,9 @@ export class MyWishListService {
         },
         {
             id: 2,
-            imgSrc: "/assets/images/product.jpg",
+            imgSrc: "assets/images/product.jpg",
             imgAlt: "...",
-            itemName: "Piqué Biker Jacket",
+            itemName: "Lorem Ipsum",
             itemPrice: 30.00,
             availability:false,
             itemColor: 'green',

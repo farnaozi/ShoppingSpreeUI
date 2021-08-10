@@ -11,7 +11,7 @@
             </div>
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide *ngFor="let product of data; let i = index" class="product-card">
-                    <div [routerLink]="['/product', product.id]" class="product-image">
+                    <div [style.background-image]="'url(assets/images/product.jpg)'" [routerLink]="['/product', product.id]" class="product-image">
                         <span style="left: 0;" *ngIf="product.salePrice != undefined" class="sale-sign">
                             {{(product.salePrice/product.price)*100 | number: '1.0-0'}}% OFF
                         </span>
