@@ -1,7 +1,6 @@
 <div class="categories">
-    <button class="btn">All</button>
-    <button class="btn">Bags</button>
-    <button class="btn">Wallets</button>
-    <button class="btn">Bracelets</button>
-    <button class="btn">Others</button>
+    <button (click)="setCategory(category)" 
+    *ngFor="let category of categories" 
+    class="btn text-capitalize" 
+    [class.active-category]="getCategory() == category">{{category}}</button>
 </div>

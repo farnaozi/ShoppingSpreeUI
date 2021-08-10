@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-reviews',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
 
+  selectRating(rating: number){
+    this.productService.loader = true;
+    this.productService.productsFilters.review = rating;
+    this.productService.productsFiltered.next();
+  }
+
+  getSelectedRating(){
+    return this.productService.productsFilters.review;
+  }
+
+  clear(){
+    this.productService.loader = true;
+    this.selectRating(0);
+  }
 }
