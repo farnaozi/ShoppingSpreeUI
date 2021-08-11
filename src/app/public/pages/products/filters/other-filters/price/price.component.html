@@ -6,6 +6,6 @@
         <ngx-slider [(value)]="this.productService.productsFilters.startPrice" 
         [(highValue)]="this.productService.productsFilters.endPrice" 
         [options]="options"
-        (userChange)="priceRangeChanged()"></ngx-slider>
+        (userChangeEnd)="priceRangeChanged()"></ngx-slider>
     </div>
 </div>

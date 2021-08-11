@@ -80,7 +80,7 @@
                     </tbody>
                 </table>
                 <strong style="float: left;padding-top: 7px;">Total Price: ${{this.myWishlistService.getWishlistItemsTotalPrice()}}</strong>
-                <button type="button" style="float: right;" class="default-button">Check Out</button>
+                <button [routerLink]="'/checkout'" type="button" style="float: right;" class="default-button">Check Out</button>
             </mat-tab>
             <mat-tab label="Newsletters">
                 <p class="pt-3">
