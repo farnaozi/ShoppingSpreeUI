@@ -45,7 +45,6 @@ export class ShoppingCartService {
 
   public saveCartItem(cartItem: CartItem) {
     if (localStorage.getItem("cart") == null) {
-      // alert("new added to empty")
       let cartArray: CartItem[] = [];
       cartArray.push({ ...cartItem })
       localStorage.setItem("cart", JSON.stringify(cartArray));
@@ -58,31 +57,14 @@ export class ShoppingCartService {
       if (index == -1) {
         tempCartItems.push({ ...cartItem });
         this.finalAct(tempCartItems);
-        // alert("new added to existing")
       }
       else {
-        // let res = tempCartItems.filter(cart => cart.product.id == cartItem.product.id)
-        //   .find(item => item.color == cartItem.color && item.size == cartItem.size)
-        // if (res == undefined) {
-        //   tempCartItems.push({ ...cartItem });
-        //   this.finalAct(tempCartItems);
-        //   alert("new added to existing")
-        //   return;
-        // }
         tempCartItems[index].quantity += cartItem.quantity;
         this.finalAct(tempCartItems);
-        // alert("new added and updated existing")
       }
     }
     this.alertService.showSuccess("Item has been Added to Cart")
   }
-
-  // public updateCartItem(id: number, updatedCartItem: CartItem) {
-  //   let tempCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart")!);
-  //   let index = tempCartItems.indexOf(tempCartItems.find(cartItem => cartItem.product.id == id)!);
-  //   tempCartItems[index] = { ...updatedCartItem };
-  //   this.finalAct(tempCartItems);
-  // }
 
   public updateCartItemQuantity(updatedCartItem: CartItem) {
     let tempCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart")!);
