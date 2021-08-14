@@ -11,11 +11,13 @@ import { QuickViewComponent } from './shared/components/quick-view/quick-view.co
 import { QuickViewModule } from './shared/components/quick-view/quick-view.module';
 import { MaterialModule } from './shared/modules/material.module';
 import { ToastrModule } from 'ngx-toastr';
+import { ErrorPageComponent } from './shared/components/error-page/error-page.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,6 @@ export class BreadcrumbComponent implements OnInit {
     router.events
     .pipe(filter(event => event instanceof NavigationEnd))
     .subscribe((event: any) => {
-      console.log(event.url);
       if(event.url.length > 0){
         this.currUrl = event.url.split("/",2)[1].split("?",2)[0];
         this.pageName = event.url.split("/",2)[1].split("?",2)[0];

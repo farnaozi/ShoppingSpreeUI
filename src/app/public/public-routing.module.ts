@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorPageComponent } from '../shared/components/error-page/error-page.component';
 import { PublicComponent } from './public.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path: 'account-dashboard', loadChildren: () => import('./pages/account-dashboard/account-dashboard.module').then(m => m.AccountDashboardModule)},
     {path: 'shopping-cart', loadChildren: () => import('./pages/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule)},
     {path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule)},
-    { path: '**', redirectTo:''}
+    {path: '404', component: ErrorPageComponent},
+    { path: '**', redirectTo:'404'}
   ]
  },
 ];
