@@ -17,7 +17,7 @@ export class ProductService {
       id: 1,
       name: "Lorem Ipsum",
       category: 'bags',
-      availability:false,
+      availability:true,
       price: 15,
       salePrice: 5,
       reviews: [{
@@ -77,7 +77,7 @@ export class ProductService {
       id: 4,
       name: "Lorem Ipsum",
       category: 'wallets',
-      availability:false,
+      availability:true,
       price: 15,
       salePrice: 5,
       reviews: [],
