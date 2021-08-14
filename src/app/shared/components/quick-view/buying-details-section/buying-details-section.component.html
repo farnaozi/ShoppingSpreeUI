@@ -60,7 +60,7 @@
         <div style="max-width: 450px;" class="input-group">
             <input [(ngModel)]="quantity" type="number" class="form-control form-control-lg d-inline me-2 mt-2">
             <button (click)="addToCart()" class="btn add-to-cart d-inline me-2 btn-lg mt-2">ADD TO CART</button>
-            <button class="btn buy-now d-inline me-2 btn-lg mt-2">BUY NOW</button>
+            <button [routerLink]="'/checkout'" class="btn buy-now d-inline me-2 btn-lg mt-2">BUY NOW</button>
         </div>
 
     </div>

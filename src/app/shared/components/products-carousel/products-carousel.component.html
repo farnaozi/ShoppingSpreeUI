@@ -26,10 +26,10 @@
                                     <span class="normal-price">${{product.price | number: '1.2-2'}}</span>
                                 </div>
                                 <div *ngIf="product?.reviews?.length != 0" class="product-stars">
-                                    <i *ngFor="let star of counter(product.reviews)" class="fa fa-star"></i> {{product?.reviews?.length}}
+                                    <i *ngFor="let star of counter(product.reviews)" class="fa fa-star"></i> ({{product?.reviews?.length}})
                                 </div>
                                 <div *ngIf="product?.reviews?.length == 0" class="product-stars">
-                                    <i style="color:initial" *ngFor="let star of [1,2,3,4,5]" class="fa fa-star-o"></i> {{product?.reviews?.length}}
+                                    <i style="color:initial" *ngFor="let star of [1,2,3,4,5]" class="fa fa-star-o"></i> 
                                 </div>
                             </div>
                             <div class="float-end">

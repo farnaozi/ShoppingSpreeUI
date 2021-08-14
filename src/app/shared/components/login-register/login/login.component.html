@@ -6,29 +6,39 @@
             <i class="fa fa-twitter fs-5" aria-hidden="true"></i>
         </div>
     </div>
-    <div class="row mt-3">
-        <div class="col-12">
-            <input placeholder="Email" type="email" class="form-control">
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-12">
-            <input placeholder="Password" type="text" class="form-control">
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-12">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Remember me
-                </label>
+    <form [formGroup]="loginForm">
+        <div class="row mt-3">
+            <div class="col-12">
+                <input placeholder="Email" type="email" class="form-control" id="loginEmail" name="loginEmail"
+                formControlName="loginEmail">
+                <span *ngIf="isFieldValid('loginEmail')" class="help-block">
+                    Please enter a valid email
+                </span>
             </div>
         </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-12">
-            <button class="btn default-button text-white fs-5 px-5 login-register">Login</button>
+        <div class="row mt-3">
+            <div class="col-12">
+                <input placeholder="Password" type="password" class="form-control" id="loginPassword" name="loginPassword"
+                formControlName="loginPassword">
+                <span *ngIf="isFieldValid('loginPassword')" class="help-block">
+                    Please enter a valid password
+                </span>
+            </div>
         </div>
-    </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <button class="btn default-button text-white fs-5 px-5 login-register">Login</button>
+            </div>
+        </div>
+    </form>
 </div>
